@@ -24,6 +24,10 @@ exports.signIn = function(req, res, next){
     var username = req.body.username;
     var password = req.body.password;
 
+    var referUrl = req.header('Referer');
+    if(!referUrl)
+      referUrl = '/admin';
+
     if(!username || !password){
         return res.render('sign/signin.html',{error:'信息不完整'});
     }
@@ -44,13 +48,16 @@ exports.signIn = function(req, res, next){
             }
             // store session cookie
             gen_session(user, res);
-            res.redirect('/admin');
+            res.redirect(referUrl);
         }
     })
 }
 
 exports.signUp = function(req, res, next){
 	var data = req.body;
+        var referUrl = req.header('Refer');
+        if(!referUrl)
+          referUrl = '/admin';
    // console.log(data);
 	UserService.SignUp(data, function(err, user){
     //    console.log(err);
@@ -59,7 +66,7 @@ exports.signUp = function(req, res, next){
 		}
 
 		gen_session(user, res);
-		return res.redirect("/admin");
+		return res.redirect(referUrl);
 	});
 }
 

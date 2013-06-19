@@ -6,7 +6,7 @@ String.prototype.format = function () {
 
 $(function() {
     //Socket.io
-    var socket = io.connect('http://barryli0526.eu01.aws.af.cm');
+    var socket = io.connect('http://121.199.58.200:3000');
 
     socket.on('error', function (reason){
         console.error('Unable to connect Socket.IO', reason);

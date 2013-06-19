@@ -6,6 +6,10 @@ var EventProxy = require('EventProxy');
 exports.enterroom = function(client){
     return function(req, res){
 
+    if(!req.session.user){
+      return res.render('sign/signin',{layout:null});
+    }
+
     if(!client){
 	return res.end('cant start redis!');
     }
