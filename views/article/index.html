@@ -1,0 +1,14 @@
+<div class="row-fluid" id="content">
+    <div class="span9">
+    	<% articles.forEach(function(article, index) { %>
+        <%- partial('article/list', { article: article}) %>
+      <%})%>
+        <%- partial('common/pagenation', { count: count,pagenum:pagenum}) %>
+    </div>
+    <div class="span3">
+				<%- partial('../sidebar/hotarticles', { articles: hotarticles}) %>
+				<%- partial('../sidebar/category', { categories: categories}) %>
+                <%- partial('../sidebar/tags',{tags:tags}) %>
+    </div>
+</div>
+

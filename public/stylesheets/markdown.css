@@ -1,0 +1,113 @@
+
+/* markdown editor */
+.wmd-button-bar {
+  margin-left: 0px;
+  background: Sliver;
+}
+.wmd-button-row {
+  position: relative;
+  height: 20px;
+  margin: 0px 0px 5px 0px;
+}
+.wmd-button {
+  width: 20px;
+  height: 20px;
+  padding-left: 2px;
+  padding-right: 3px;
+  position: absolute;
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+}
+.wmd-button > span {
+  background-image: url(/libs/pagedown/wmd-buttons.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.wmd-spacer {
+  width: 1px; 
+  height: 20px; 
+  margin-left: 14px;
+  position: absolute;
+  background-color: Silver;
+  display: inline-block; 
+  list-style: none;
+}
+.wmd-spacer1 {
+  left: 50px;
+}
+.wmd-spacer2 {
+  left: 175px;
+}
+.wmd-spacer3{
+  left: 300px;
+}
+.wmd-preview {
+  width: 560px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: auto;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+textarea[id^=wmd-input] {
+  height: 200px;
+}
+.topic-wmd-preview {
+  height: 400px;
+}
+.wmd-preview {
+  height: 213px;
+}
+.reply2-wmd-preview {
+  width: 518px;
+}
+.wmd-prompt-background {
+  background-color: Black;
+}
+.wmd-prompt-dialog {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+
+  border: 1px solid #cccccc;
+  background-color: #F5F5F5;
+}
+.put_top {
+  color: white;
+  background: hsl(240,30%,80%);
+  padding: 1px 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.fileinput-button{
+    overflow:hidden;
+    position:relative;
+}
+
+.fileinput-button input{
+    top:0px;
+    right:0px;
+    margin:0px;
+    position:absolute;
+    cursor:pointer;
+    font-size:23px;
+    opacity:0;
+    transform:translate(-300px,0) scale(4);
+}

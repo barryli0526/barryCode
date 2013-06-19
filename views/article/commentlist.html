@@ -1,0 +1,43 @@
+﻿<%comments.forEach(function(comment,i){%>
+<div class="comment" cid='<%=comment._id%>'>
+	<div class="left avatar_img">
+		<img src="http://uyan.cc/uploads/duface.png"/>	
+	</div>
+	<div class="right span8">
+		<div class="name"><%=comment.user.nickname%></div>
+		<div class="content"><%-comment.content%></div>
+		<div class="bottom">
+		<div class="time left"><%=comment.create_at%></div>
+			<div class="toolbar">
+					<a class="reply_up" href="javascript:return false;"><i class="icon icon-up"></i>顶</a>	
+					<a class="reply_down"href="javascript:return false;"><i class="icon icon-down"></i>踩</a>
+					<a class="reply_btn" href="javascript:return false;"><i class="icon icon-reply"></i>回复</a>		
+			</div>	
+		</div>
+	</div>
+	
+		<div class='reply_area left'>
+			<div class='sep10'></div>
+			<div class='reply_editor tabbable' id='reply2_editor-<%= i%>'>
+				<div class='sep10'></div>
+				<ul class='nav nav-pills'>
+					<li class='active'><a href='#markdown-<%=i %>' data-toggle='pill'>markdown</a></li>
+					<li><a href='#preview-<%= i%>' data-toggle='pill' class="preview-btn">预览</a></li>
+				</ul>
+				<div class='tab-content'>
+					<div class='active tab-pane' id='markdown-<%=i %>'>
+						<div id='wmd-button-bar-<%=i %>'></div>
+						<textarea class='span7' id='wmd-input-<%=i %>' name='r2_content' rows='4'></textarea>
+					</div>
+					<div id='preview-<%=i %>' class='tab-pane'>
+						<div id='wmd-preview-<%=i %>' class='wmd-preview reply2-wmd-preview'></div>
+					</div>
+				</div>
+				<div class='sep10'></div>
+				<button class='btn submit_reply' id='<%= comment._id %>'>回复</button>
+				<span class='sp10'></span>
+				<span class='col_fade'>Ctrl+Enter 快捷回复</span>
+			</div>
+		</div>
+	</div>
+<%})%>

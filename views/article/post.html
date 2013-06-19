@@ -1,0 +1,21 @@
+
+<div class="post" articleid=<%=article._id%>>
+    <h2>
+        <a href="/articles/detail/<%=article._id%>"><%=article.article_title%></a>
+    </h2>
+    <small><%=article.post_time%> post by <%=article.user.nickname%>, view: <%=article.info.visit_count%></small>
+    <div class="entry content">
+				 <%=article.article_content%>
+    </div>
+    <ul class="postmetadata">
+        <li class="icon_comment icon_r">
+            <a href="/articles/detail/<%=article._id%>#comments"><%=article.info.reply_count%> Comments</a>
+        </li>
+        <li class="icon_cat">
+            <strong>目录：</strong>
+            <% article.category.forEach(function(category, index) { %>
+            <a href="/category/<%=category._id%>"><%=category.category_name%></a>
+            <%})%>
+        </li>
+    </ul>
+</div>

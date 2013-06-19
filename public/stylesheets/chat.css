@@ -1,0 +1,63 @@
+body{
+    background-color:gainsboro;
+}
+
+#head{
+    margin:0 auto;
+    padding-top:10px;
+}
+
+#head .group{
+    float:left;
+}
+
+#head .status{
+    float:right;
+}
+
+.leftBar ul{
+    margin-top:30px;
+    background-color:honeydew;
+    height:700px;
+    padding:13px 5px;
+}
+
+.leftBar li{
+    padding:3px 5px 15px 5px;
+    border-bottom:1px solid burlywood;
+}
+
+.leftBar li{
+    color:white;
+    font-size:14px;
+
+}
+
+.user img{
+    width:40px;
+    border-radius:20px;
+    box-shadow:0px 0px 6px hsla(0,27%,42%,0.5);
+}
+
+.user span{
+
+}
+
+.rightBar .chatcontent{
+    margin-top:30px;
+    width:100%;
+    height:600px;
+    background-color:darkslategray;
+}
+
+.rightBar .chat{
+    margin-top:20px
+}
+
+.rightBar .submit{
+    margin-top:7px;
+}
+
+.chatcontent p{
+    color:white;
+}

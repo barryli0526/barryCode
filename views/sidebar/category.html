@@ -1,0 +1,11 @@
+﻿
+	<div class="well">
+		<ul class="nav nav-list">
+			<li class="nav-header">目录</li>
+				<%categories.forEach(function(category, i){%>
+		      <li><a href="/category/<%=category._id%>"><%=category.category_name%></a></li>
+						<%})%>
+    </ul>
+  </div>
+
+

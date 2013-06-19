@@ -1,0 +1,42 @@
+﻿<form id='create_topic_form' action='/<%=articleid%>/comment' method='post'>
+	<div>
+  	<label class='bold' for='t_content'>内容和标签</label>
+    	<div class='tabbable'>
+      	<ul class='nav nav-pills'>
+        	<li class='active'><a href='#markdown' data-toggle='pill'>markdown</a></li>
+          <li><a href='#preview' data-toggle='pill' class="preview-btn">预览</a></li>
+        </ul>
+      	<div class='tab-content'>
+        	<div class='active tab-pane' id='markdown'>
+          <div id='wmd-button-bar'></div>
+          	<div class='input'>
+            	<textarea class='span8' id='wmd-input' name='t_content' rows='20'></textarea>
+            </div>
+          </div>
+          <div id='preview' class='tab-pane'>
+          	<div id='wmd-preview' class='wmd-preview topic-wmd-preview'></div>
+          </div>
+        </div>
+      </div>
+	</div>
+    <input type='hidden' id='topic_tags' name='topic_tags' value='' />
+    <input type='hidden' name='_csrf' value='' />
+</form>
+ <div class='form-actions'>
+   <button id='submit_btn' class='btn sumit_reply'>发布</button>
+ </div>
+
+<!-- markdown editor -->
+<script src="/javascript/vendor/jquery.ui.widget.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="/javascript/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="/javascript/jquery.fileupload.js"></script>
+
+<link type='text/css' rel='stylesheet' href='/libs/code-prettify/prettify.css' />
+ <script src='/libs/code-prettify/prettify.js'></script>
+ <script src='/libs/ajax-upload/ajaxupload.js'></script>
+ <link href="/stylesheets/markdown.css" rel="stylesheet"/>
+<script src='/libs/pagedown/Markdown.Converter.js'></script>
+<script src='/libs/showdown.js'></script>
+<script src='/libs/pagedown/Markdown.Editor.js'></script>

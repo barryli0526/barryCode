@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js lt-ie9 lt-ie8 lt-ie7">   <![endif]-->
+<!--[if IE 7]>          <html class="no-js lt-ie9 lt-ie8">          <![endif]-->
+<!--[if IE 8]>          <html class="no-js lt-ie9">                 <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js">                        <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dashboard</title>
+    <meta name="description" content="Metis: Bootstrap Responsive Admin Theme">
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap-responsive.min.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/chosen.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/calendar.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/jquery.tagsinput.css"/>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/uniform.default.css"/>
+
+    <link rel="stylesheet" href="/stylesheets/theme.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if IE 7]>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css"/>
+    <![endif]-->
+
+    <script src="/javascript/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+<!-- BEGIN WRAP -->
+<div id="wrap">
+
+
+<!-- BEGIN TOP BAR -->
+<div id="top">
+    <!-- .navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="index.html">Metis</a>
+                <!-- .topnav -->
+                <div class="btn-toolbar topnav">
+                    <div class="btn-group">
+                        <a id="changeSidebarPos" class="btn btn-success" rel="tooltip"
+                           data-original-title="Show / Hide Sidebar" data-placement="bottom">
+                            <i class="icon-resize-horizontal"></i>
+                        </a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-inverse" rel="tooltip" data-original-title="E-mail" data-placement="bottom">
+                            <i class="icon-envelope"></i>
+                            <span class="label label-warning">5</span>
+                        </a>
+                        <a class="btn btn-inverse" rel="tooltip" href="#" data-original-title="Messages"
+                           data-placement="bottom">
+                            <i class="icon-comments"></i>
+                            <span class="label label-important">4</span>
+                        </a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-inverse" rel="tooltip" href="#" data-original-title="Document"
+                           data-placement="bottom">
+                            <i class="icon-file"></i>
+                        </a>
+                        <a href="#helpModal" class="btn btn-inverse" rel="tooltip" data-placement="bottom"
+                           data-original-title="Help" data-toggle="modal">
+                            <i class="icon-question-sign"></i>
+                        </a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-inverse" data-placement="bottom" data-original-title="Logout" rel="tooltip"
+                           href="/signout"><i class="icon-off"></i></a></div>
+                </div>
+                <!-- /.topnav -->
+                <div class="nav-collapse collapse">
+                    <!-- .nav -->
+                    <ul class="nav">
+                        <li class="active"><a href="index.html">Dashboard</a></li>
+                        <li><a href="table.html">Tables</a></li>
+                        <li><a href="file.html">File Manager</a></li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                Form Elements <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="form-general.html">General</a></li>
+                                <li><a href="form-validation.html">Validation</a></li>
+                                <li><a href="form-wysiwyg.html">WYSIWYG</a></li>
+                                <li><a href="form-wizard.html">Wizard &amp; File Upload</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.nav -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.navbar -->
+</div>
+<!-- END TOP BAR -->
+
+
+<!-- BEGIN HEADER.head -->
+<header class="head">
+    <div class="search-bar">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="search-bar-inner">
+                    <a id="menu-toggle" href="#menu" data-toggle="collapse"
+                       class="accordion-toggle btn btn-inverse visible-phone"
+                       rel="tooltip" data-placement="bottom" data-original-title="Show/Hide Menu">
+                        <i class="icon-sort"></i>
+                    </a>
+
+                    <form class="main-search">
+                        <input class="input-block-level" type="text" placeholder="Live search...">
+                        <button id="searchBtn" type="submit" class="btn btn-inverse"><i class="icon-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ."main-bar -->
+    <div class="main-bar">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <h3><i class="icon-home"></i> Dashboard</h3>
+                </div>
+            </div>
+            <!-- /.row-fluid -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.main-bar -->
+</header>
+<!-- END HEADER.head -->
+
+<!-- BEGIN LEFT  -->
+<div id="left">
+    <!-- .user-media -->
+    <div class="media user-media hidden-phone">
+        <a href="/" class="user-link">
+            <img src="<%=current_user.avatar%>" alt="" class="media-object img-polaroid user-img">
+        </a>
+
+        <div class="media-body hidden-tablet">
+            <h5 class="media-heading"><a href="/"><%=current_user.nickname%></a></h5>
+            <ul class="unstyled user-info">
+
+                <li>上次登陆时间 : <br/>
+                    <small><i class="icon-calendar"></i><%=current_user.last_login_at%></small>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.user-media -->
+
+    <!-- BEGIN MAIN NAVIGATION -->
+    <ul id="menu" class="unstyled accordion collapse in">
+        <li class="accordion-group" id="article">
+            <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#article_nav">
+                <i class="icon-dashboard icon-large"></i> 操作 <span
+                    class="label label-inverse pull-right">2</span>
+            </a>
+            <ul class="collapse" id="article_nav">
+                <li><a href='/admin/article/add'><i class="icon-angle-right"></i> 发表文章</a></li>
+                <li><a href="/admin/article/edit"><i class="icon-angle-right"></i> 管理文章</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group" id="category">
+            <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#category_nav">
+                <i class="icon-dashboard icon-large"></i>分类<span
+                    class="label label-inverse pull-right">2</span>
+            </a>
+            <ul class="collapse" id="category_nav">
+                <li><a href="/admin/category/add"><i class="icon-angle-right"></i> 新增分类</a></li>
+                <li><a href="/admin/category/edit"><i class="icon-angle-right"></i>编辑分类</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- END MAIN NAVIGATION -->
+
+</div>
+<!-- END LEFT -->
+
+<!-- BEGIN MAIN CONTENT -->
+<div id="content">
+    <%-body%>
+</div>
+<!-- /.outer -->
+</div>
+<!-- END CONTENT -->
+
+
+<!-- #push do not remove -->
+<div id="push"></div>
+<!-- /#push -->
+</div>
+<!-- END WRAP -->
+
+<div class="clearfix"></div>
+
+<!-- BEGIN FOOTER -->
+<div id="footer">
+    <p>2013 © Metis Admin</p>
+</div>
+<!-- END FOOTER -->
+
+<script src="/javascript/vendor/jquery-1.9.1.min.js"></script>
+
+<script src="/javascript/vendor/jquery-migrate-1.1.1.min.js"></script>
+
+<script src="/javascript/vendor/jquery-ui-1.10.0.custom.min.js"></script>
+
+
+<script src="/javascript/vendor/bootstrap.min.js"></script>
+
+
+<script src="/javascript/lib/jquery.mousewheel.js"></script>
+<!-- markdown editor -->
+<!-- markdown editor -->
+<script src="/javascript/vendor/jquery.ui.widget.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="/javascript/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="/javascript/jquery.fileupload.js"></script>
+<link type='text/css' rel='stylesheet' href='/libs/code-prettify/prettify.css' />
+<script src='/libs/code-prettify/prettify.js'></script>
+<script src='/libs/ajax-upload/ajaxupload.js'></script>
+<link href="/stylesheets/markdown.css" rel="stylesheet"/>
+<script src='/libs/pagedown/Markdown.Converter.js'></script>
+<script src='/libs/showdown.js'></script>
+<script src='/libs/pagedown/Markdown.Editor.js'></script>
+<script type="text/javascript" src="/javascript/lib/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="/javascript/lib/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="/javascript/lib/jquery.uniform.min.js"></script>
+
+
+
+
+<script src="/javascript/main.js"></script>
+
+
+
+<script type="text/javascript">
+    $(function() {
+        var editors = {};
+        function run_md_editor(){
+            var converter = new Showdown.converter();
+            editors[""] = new Markdown.Editor(converter);
+            editors[""].run();
+        }
+        run_md_editor();
+
+    });
+</script>
+</body>
+</html>

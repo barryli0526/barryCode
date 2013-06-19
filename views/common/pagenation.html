@@ -1,0 +1,22 @@
+﻿<div class="pagination pagination-small">
+    <ul>
+        <%
+        var Start = (pagenum-2)<0?(0):(pagenum-2);
+        var End = (Start + 5) > count ? (count) : (Start + 5);%>
+        <li><a href="?page=0">首页</a></li>
+        <%if(Start >= 1){%>
+        <li><a href="?page=<%=Start-1%>">...</a></li>
+        <%}
+        for(var i=Start;i<End;i++){
+        if(i == pagenum){%>
+        <li class="disabled"><a href="#"><%=i+1%></a></li>
+        <%}else{%>
+        <li><a href="?page=<%=i%>"><%=i+1%></a></li>
+        <%}}
+        if(count > End){%>
+        <li><a href="?page=<%=End%>">...</a></li>
+        <%}%>
+        <li><a href="?page=<%=count-1%>">末页</a></li>
+
+    </ul>
+</div>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>devtext.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Devtext Blog Engine"/>
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/stylesheets/bootstrap-responsive.min.css" rel="stylesheet"/>
+    <link href="/stylesheets/main.css" rel="stylesheet"/>
+    <script src='/javascript/vendor/jquery-1.9.1.min.js'></script>
+    <meta name="keywords" content="devtext,devtext blog,blog,mvc blog" />
+    <meta name="description" content="devtext blog engine "/>
+</head>
+<body>
+
+<div class="container-fluid" id="mainWrapper">
+    <div class="header">
+        <div class="log muted">
+            <img alt="blog" src="http://img.devtext.com/devtext.gif"/>
+        </div>
+        <ul class="nav nav-pills right homeMenu">
+            <li class="active">
+                <a href="/">首页</a>
+            </li>
+            <li>
+                <a href="/articles">博客</a>
+            </li>
+             <li>
+                <a href="/feeds">新闻</a>
+            </li>
+            <li>
+                <a href="/chat">聊天</a>
+            </li>
+            <li>
+                <a href="/admin">管理</a>
+            </li>
+            <li>
+                <a href="/about">关于</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="spliter"></div>
+    <%- body %>
+</div>
+
+<div class="footer">
+
+
+    <div class="copyRight">
+        © 2009-2013
+        <a href="/" target="_blank">lilei</a>&nbsp;版权所有&nbsp;&nbsp;|&nbsp;
+        <a href="#" target="_self">沪ICP备xxx号</a>&nbsp;&nbsp;作者信息
+        <a href="/about">李雷</a>
+    </div>
+    <div class="productversion">
+        Blog Engine 0.1.26.13
+    </div>
+</div>
+		<script src='/javascript/vendor/bootstrap.min.js'></script>
+<script src='/javascript/tag.js'></script>
+<script src='/javascript/dev/site.js'></script>
+
+</body>
+</html>

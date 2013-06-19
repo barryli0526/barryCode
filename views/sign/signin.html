@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login</title>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/login/login.css">
+</head>
+<body>
+<div class="container">
+    <%if(typeof(error) !== 'undefined'){%>
+    <div class="row alert alert-error">
+       <%=error%>
+    </div>
+    <%}%>
+    <div class="row">
+        <div class="span4 offset4">
+            <div class="signin">
+                <div id="logo">
+                    <img src="assets/logo.png" alt="Metis Logo">
+                </div>
+                <div class="tab-content">
+                    <div id="login" class="tab-pane active">
+                        <form action="/signin" accept-charset="utf-8" method="post">
+                            <p class="muted tac">
+                                Enter your username and password
+                            </p>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-user"></i></span>
+                                        <input type="text" name="username" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-lock"></i></span>
+                                        <input type="password" name="password" placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-inverse btn-block" type="submit">Sign in</button>
+                        </form>
+                    </div>
+                    <div id="forgot" class="tab-pane">
+                        <form action="index.html">
+                            <p class="muted tac">
+                                Enter your valid e-mail
+                            </p>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-envelope"></i></span>
+                                        <input type="email" placeholder="mail@domain.com" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-inverse btn-block" type="submit">Recover Password</button>
+                        </form>
+                    </div>
+                    <div id="signup" class="tab-pane">
+                        <form action="/signup"  accept-charset="utf-8" method="post">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-user"></i></span>
+                                        <input type="text" name="loginname" placeholder="username">
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-envelope"></i></span>
+                                        <input type="email" name="email" placeholder="mail@domain.com">
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-lock"></i></span>
+                                        <input type="password" name="pass" placeholder="password">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-inverse btn-block" type="submit">Register</button>
+                        </form>
+                    </div>
+                </div>
+
+                <ul class="inline">
+                    <li><a class="muted" href="#login" data-toggle="tab">Login</a></li>
+                    <li><a class="muted" href="#forgot" data-toggle="tab">Forgot Password</a></li>
+                    <li><a class="muted" href="#signup" data-toggle="tab">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascript/vendor/jquery-1.9.1.min.js"></script>
+<script src="/javascript/vendor/bootstrap.min.js"></script>
+</body>
+</html>

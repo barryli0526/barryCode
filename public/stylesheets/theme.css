@@ -1,0 +1,71 @@
+/* 
+    Document   : theme
+    Created on : Apr 8, 2013, 11:26:40 PM
+    Author     : ono
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+this file intentionally left blank
+*/
+
+ .box-line{
+	padding-left:20px;
+}
+
+#newpost .tab-content{
+	border:none;
+	padding-left:0px;
+}
+
+/*
+article page css
+*/
+.table th{
+
+}
+
+.table th.title{
+    width:250px;
+}
+
+.table tbody tr{
+    height:70px;
+}
+
+.table .row-actions{
+    width:100px;
+    padding:2px 0px 0px 0px;
+    display:none;
+}
+
+.table td a{
+    color:#21759b;
+}
+
+.table .row-actions span a{
+    color:#21759b;
+    font-size:12px;
+}
+
+div .dataTables_length{
+    top:3px;
+    right:10px;
+    position:absolute;
+}
+.dataTables_length label{
+    text-align:left;
+    float:left;
+}
+
+.dataTables_length select{
+    width:75px;
+}
+
+#dataTable_wrapper .pagination{
+    margin:0px;
+    float:right;
+}
+
+
