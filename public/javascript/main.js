@@ -76,8 +76,72 @@
     }) */
 
 
-
+//test();
 });
+
+test();
+
+
+function test(){
+
+  function setCookie(name,value,duration,path,domain,secure){
+    var cookie=name+'='+escape(value)+(duration?";expires="+(new Date(new Date().getTime()+(duration*3600000))).toUTCString():"")+";path="+(path&&path!=''?path:'/')+(domain&&domain!=''?';domain='+domain:'')+(secure?';secure':'');
+   document.cookie = cookie;
+
+  }
+
+  function getCookie(name){
+    if(document.cookie.length>0){
+      var ix = document.cookie.indexOf(name+'=');
+      if(ix>-1){
+        var start = ix+name.length+1,
+            end = document.cookie.indexOf(';',start);
+        if(end==-1){
+           end =document.cookie.length;
+        }
+        return unescape(document.cookie.substring(start,end));
+      }
+    }
+   return null;
+  }
+
+ function updateCookie(name,value){
+
+   if(document.cookie.length>0){
+     var ix = document.cookie.indexOf(name+'=');
+     if(ix>-1){
+       var start = ix+name.length+1,
+           end = document.cookie.indexOf(';',start);
+       var oldcookie = document.cookie;
+       var newcookie = '';
+       
+       newcookie = oldcookie.substring(0,start) + value;
+       if(end > 0)
+         newcookie += oldcookie.substring(end,oldcookie.length);
+      document.cookie = newcookie;
+     }
+   }
+ 
+ }
+ if(!getCookie('test'))
+   setCookie('test',1,3000);
+ else
+   setCookie('test',parseInt(getCookie('test'))+1);
+
+window.onload = function(){
+if(!getCookie('test1')){
+setCookie('test1',1);
+}else
+updateCookie('test1',parseInt(getCookie('test1'))+1);
+}
+
+window.onunload = function(){
+if(getCookie('test1')){
+updateCookie('test1',parseInt(getCookie('test1'))-1);
+}
+}
+
+}
 
 function submitDelete(){
     $('.submit_delete').click(function(){

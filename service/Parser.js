@@ -1,21 +1,10 @@
 var jsdom   = require('jsdom'),
     et = require('elementtree'),
+    cheerio = require('cheerio'),
     request = require('request');
 
 
 exports.ParseRequest = function(option, callback){
- /* var option = {
-        //  "feedurl" : "http://www.huxiu.com/rss/0.xml",
-         // "feedurl":"http://www.36kr.com/feed",
-          "feedurl":"http://feed.feedsky.com/diggdigest",
-          "site": "Fuck My Life",
-          "entrytag": "item",
-          "titletag":"title",
-          "datetag": "pubDate",
-          "contenttag": "description",
-          "urltag":"link",
-          "type":"rss"
-      }; */
 
   request(option.feedurl, function(err, res, body){
 
@@ -30,23 +19,28 @@ exports.ParseRequest = function(option, callback){
 
 
 exports.getContentByUrl = function(url, filterOption, callback){
+   
     request(url, function(err, res, body){
-        jsdom.env({
+   
+      /*  jsdom.env({
             html:body,
             scripts: ["http://code.jquery.com/jquery.js"],
             done: function(err, window){
-
+                console.timeEnd('jsdomTime');
                 var $ = window.$;
 
-            //  var str =   filter($("#neirong_box table td"), $);
-            //    var str =   filter($(".mainContent"), $);
-           //     var str = filter($('#content .post p'),$);
+                console.time('transfertime');                
+
                 var str = filter($(filterOption.wrapper),$);
+                console.timeEnd('transfertime');
 
                   callback(null, str);
 
             }
-        })
+        })*/
+        var $ = cheerio.load(body);
+        var str = $(filterOption.wrapper).html();
+        return callback(null,str);
     })
 }
 

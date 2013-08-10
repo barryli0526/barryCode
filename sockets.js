@@ -49,7 +49,7 @@ module.exports = function(app, client){
      io.enable('browser client gzip');
   });
 
-  io.sockets.on('connection', function (socket) {
+  io.sockets.on('connection', function (socket) {    
 
       var hs = socket.handshake
           , nickname = hs.package.user.name
@@ -57,9 +57,6 @@ module.exports = function(app, client){
           , userKey = provider + ":" + nickname
           , room_id = 'room'
           , now = new Date() ;
-      // Chat Log handler
-       //   , chatlogFileName = './chats/' + room_id + (now.getFullYear()) + (now.getMonth() + 1) + (now.getDate()) + ".txt"
-        //  , chatlogWriteStream = fs.createWriteStream(chatlogFileName, {'flags': 'a'});
 
       socket.join(room_id);
 
@@ -70,13 +67,12 @@ module.exports = function(app, client){
 
               client.sadd('socketio:sockets', socket.id);
 
-             // console.log('socketadd');
               client.sadd('rooms:' + room_id + ':online', userKey, function(err, userAdded) {
                   if(userAdded) {
-                      console.log('useradd');
                       client.hincrby('rooms:' + room_id + ':info', 'online', 1);
                       client.get('users:' + userKey + ':status', function(err, status) {
-                          io.sockets.in(room_id).emit('new user', {
+                         
+                      io.sockets.in(room_id).emit('new user', {
                               sid: socket.id,
                               nickname: nickname,
                               provider: provider,

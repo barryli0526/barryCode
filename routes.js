@@ -8,6 +8,7 @@ var category_admin = require('./controllers/admin/category');
 var uploader = require('./controllers/upload');
 var feed = require('./controllers/feed');
 var chat = require('./controllers/chat');
+var demoList = require('./controllers/demoList');
 
 
 var fs = require('fs');
@@ -66,7 +67,8 @@ module.exports = function (app, client) {
 
   app.post('/admin/category/add',category_admin.Add);
 
-
+  //demo
+  app.get('/demo/list', demoList.Index);
 
 
 
