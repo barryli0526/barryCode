@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Tripwire - MSN SET</title>
+    <style type="text/css">
+        .fbtripwire
+        {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            border: 2px solid #07527A;
+            min-width: 300px;
+            min-height: 237px;
+            overflow: hidden;
+            background: #fff;
+            text-align: center;
+            z-index: 100;
+        }
+
+            .fbtripwire .header
+            {
+                padding-top: 10px;
+                color: #006093;
+                font: 20px Segoe UI Regular;
+            }
+
+            .twtripwire .footer a,
+            .fbtripwire .footer a
+            {
+                text-decoration: none;
+            }
+
+            .twtripwire .footer span,
+            .fbtripwire .footer span
+            {
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                color: #A9A9A9;
+                font: 11px Segoe UI SemiLight;
+            }
+
+            .twtripwire .footer .close,
+            .fbtripwire .footer .close
+            {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                padding: 0 12px 12px 0;
+                background: url("static/i/close.png") no-repeat scroll 0 0;
+            }
+
+        .overlay
+        {
+            position: fixed;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+            filter: alpha(opacity =50);
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 999;
+        }
+
+        .twtripwire
+        {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            height: 254px;
+            width: 528px;
+            margin: -127px 0 0 -264px;
+            border: 2px solid #005D94;
+            overflow: hidden;
+            z-index: 1000;
+            background: #fff;
+        }
+
+            .twtripwire .primary
+            {
+                float: right;
+                height: 100%;
+                width: 73%;
+                background: #5293B5;
+            }
+
+            .twtripwire .secondary
+            {
+                float: left;
+                height: 100%;
+                width: 27%;
+                background: #fff url(static/i/msnnow.png) no-repeat 50% 50%;
+            }
+
+            .twtripwire .primary .content
+            {
+                height: 52px;
+                position: relative;
+                top: 50%;
+                margin: -26px 0 0 17px;
+                line-height: 1px;
+                font: 20px Segoe UI Regular;
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <div class="fbtripwire">
+        <div class="header">
+            Like MSN Now for more stories
+        </div>
+        <div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/msnnow" data-width="300"
+                data-height="200" data-show-faces="true" data-stream="false" data-show-border="false"
+                data-header="false">
+            </div>
+        </div>
+        <div class="footer">
+            <a href="#"><span>Don't show this again</span></a> <a class="close" href="#" title="close"
+                alt="close"></a>
+        </div>
+    </div>
+
+
+    <div class="twtripwire">
+        <div class="primary">
+            <div class="content">
+                <a href="https://twitter.com/msnNOW" class="twitter-follow-button" data-size="large">Follow @msnNOW</a>
+                <div><strong>GET the most viral stories on the web</strong></div>
+            </div>
+            <div class="footer">
+                <a href="#"><span>Don't show this again</span></a>
+                <a class="close" href="#" title="close" alt="close"></a>
+            </div>
+        </div>
+        <div class="secondary"></div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript">
+
+        //FB.Event.subscribe('auth.login', function (response)
+        //{
+        //    console.log(response);
+        //});
+
+        $.ajax({
+            url: "http://connect.facebook.net/en_US/all.js#xfbml=1",
+            dataType: "script",
+            success: function ()
+            {
+                setTimeout(load, 0);
+            }
+        });
+
+        function load()
+        {
+            var FB = window.FB;
+            var user = {
+                uid: "",
+                status: "",
+                token: ""
+            }
+
+            var init =
+                  {
+                      appId: "132970837947",
+                      status: 1,
+                      cookie: 1,
+                      xfbml: 1
+                  }
+            FB.init(init);
+
+            FB.getLoginStatus(function (response)
+            {
+                user.status = response.status;
+                if (response.status === "connected")
+                {
+                    // the user is logged in and has authenticated your
+                    // app, and response.authResponse supplies
+                    // the user's ID, a valid access token, a signed
+                    // request, and the time the access token 
+                    // and signed request each expire
+                    user.uid = response.authResponse.userID;
+                    user.token = response.authResponse.accessToken;
+                }
+                else if (response.status === 'not_authorized')
+                {
+                    // the user is logged in to Facebook, 
+                    // but has not authenticated your app
+                }
+                else
+                {
+                    // the user isn't logged in to Facebook.
+                }
+            }, true);
+
+            winFB.Event.subscribe('edge.create',
+                        function (url)
+                        {
+                            trackEdge(url, settings.piitxt.edge.create);
+                        });
+
+            FB.Event.subscribe('auth.login', function (response)
+            {
+                console.log(response);
+            });
+        }
+    </script>
+</body>
+</html>
