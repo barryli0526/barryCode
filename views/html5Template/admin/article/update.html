@@ -1,0 +1,97 @@
+<div class="container-fluid outer">
+    <div class="row-fluid">
+        <!-- .inner -->
+        <div class="span12 inner">
+            <hr/>
+            <form action="/admin/article/<%=article._id%>/update" accept-charset="utf-8" method="post">
+                <div id="newpost" class="form" class="box">
+                    <header>
+                        <h5>发表文章</h5>
+                    </header>
+                    <hr/>
+                    <div class='control-group box-line'>
+                        <label  class="control-label">标题</label>
+                        <input name="article_title" type="text" value="<%=article.article_title%>"/>
+                    </div>
+                    <hr/>
+                    <div class='control-group box-line'>
+                        <label  class="control-label">摘要</label>
+                        <input name="summary" type="text" value="<%=article.summary%>"/>
+                    </div>
+                    <hr/>
+                    <div class='control-group box-line'>
+                        <label class="control-label">meta</label>
+                        关键字:<input name="meta_keywords" type="text" value="<%=article.meta_keywords%>"/>
+                        描述:<input name="meta_description" type="text" value="<%=article.meta_description%>"/>
+                    </div>
+                    <hr/>
+                    <div class='control-group box-line'>
+                        <label class="control-label">分类</label>
+                        <div class="controls">
+                            <select data-placeholder="选一个目录吧" data-original-value='<%=article.categoryIds%>' id='category_chosen' name="categories" class="chzn-select span6" tabindex="2">
+                                <option value=""></option>
+                                <%categories.forEach(function(category,i){
+                                    if(article.categoryIds.indexOf(category._id.toString()) !== -1){
+                                %>
+                                <option value="<%=category._id%>" selected="selected"><%=category.category_name%></option>
+                                <%}else{%>
+
+                                <option value="<%=category._id%>"><%=category.category_name%></option>
+                                <%}})%>
+                            </select>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="control-group box-line">
+                        <label for="tags" class="control-label">标签</label>
+                        <div class="controls">
+                            <input class="span6" name="tags" id="tags" value="<%=article.tags%>"/>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="control-group box-line">
+                        <label class="control-label">选项</label>
+                        <div class="control">
+                            <%=(article.top?true:false)%>
+                            <label>
+                                <%if(article.top){%>
+                                <input class="uniform" name="top" checked="checked" type="checkbox"  value="top">置顶文章
+                                <%}else{%>
+                                <input class="uniform" name="top" type="checkbox"  value="top">置顶文章
+                                <%}%>
+                            </label>
+                            <label>
+                                <%if(article.enable_comment){%>
+                                <input class="uniform" name="enable_comment" type="checkbox" checked="checked" value="enable_comment">允许评论
+                                <%}else{%>
+                                <input class="uniform" name="enable_comment" type="checkbox" value="enable_comment">允许评论
+                                <%}%>
+                            </label>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class='control-group box-line'>
+                        <h6>内容:</h6>
+                        <div class='tab-content'>
+                            <div class='active tab-pane' id='markdown'>
+                                <div id='wmd-button-bar'></div>
+                                <div class='input'>
+                                    <textarea class='span8' id='wmd-input'  name='article_content' rows='20'>
+                                        <%=article.article_content%>
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div id='preview' class='tab-pane'>
+                                <div id='wmd-preview' class='wmd-preview topic-wmd-preview'></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+            <button class="btn btn-primary update_article" >更新</button>
+        </div>
+    </div>
+    <!-- /.inner -->
+</div>

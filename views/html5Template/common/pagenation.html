@@ -1,0 +1,19 @@
+<p id="pages">
+    <%
+    var Start = (pagenum-2)<0?(0):(pagenum-2);
+    var End = (Start + 5) > count ? (count) : (Start + 5);%>
+    <a href="?page=0">首页</a>
+    <%if(Start >= 1){%>
+    <a href="?page=<%=Start-1%>">...</a>
+    <%}
+    for(var i=Start;i<End;i++){
+    if(i == pagenum){%>
+<b><%=i+1%></b>
+<%}else{%>
+<a href="?page=<%=i%>"><%=i+1%></a>
+<%}}
+if(count > End){%>
+<a href="?page=<%=End%>">...</a>
+<%}%>
+<a href="?page=<%=count-1%>">末页</a>
+</p>

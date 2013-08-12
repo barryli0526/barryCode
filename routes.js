@@ -19,7 +19,15 @@ var config = require('./config/base').config;
 
 module.exports = function (app, client) {
   // home page
-  app.get('/', article.index);
+  app.get('/', function(req, res){
+      res.render('index');
+  })
+
+  app.get('/about', function(req, res){
+      res.render('about');
+  })
+
+ // app.get('/', article.index);
 
   app.get('/articles',article.index);
   app.get('/articles/detail/:articleid',article.detail);

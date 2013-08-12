@@ -1,0 +1,17 @@
+<%feeds.forEach(function(feed){%>
+
+<div class="post">
+
+    <h2>
+        <a class="title" href="javascript:false;" data-src="<%=feed.url%>"><%=feed.title%></a>
+        <span class="preload" style="display:none;"></span>
+    </h2>
+    <small><%=feed.date%> post by   虎嗅  </small>
+    <div class="entry content">
+        <div class="art-desc">
+            <%=feed.content%>
+        </div>
+    </div>
+
+</div>
+<%})%>

@@ -1,0 +1,27 @@
+
+<nav>
+
+    <h3>标签</h3>
+    <div class="tagWrapper">
+        <%
+        var max = 0, min = 0;
+        tags.forEach(function(tag){
+        var count = parseInt(tag.value.count,0);
+        if(count > max)
+        max = count;
+        if(count < min)
+        min = count;
+        %>
+        <a href="/tag/<%=tag._id%>" data-count="<%=tag.value.count%>"><%=tag._id%></a>
+
+        <%});%>
+        <script>
+            $(function(){
+                createTags(<%=max%>,<%=min%>);
+            })
+        </script>
+        <%
+
+        %>
+    </div>
+</nav>

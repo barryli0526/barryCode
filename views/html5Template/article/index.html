@@ -1,0 +1,16 @@
+<section id="main">
+    <h2>博文列表</h2>
+    <% articles.forEach(function(article, index) { %>
+    <%- partial('article/list', { article: article}) %>
+    <%})%>
+    <footer>
+        <%- partial('common/pagenation', { count: count,pagenum:pagenum}) %>
+
+    </footer>
+</section>
+
+<aside id="bar">
+    <%- partial('../sidebar/hotarticles', { articles: hotarticles}) %>
+    <%- partial('../sidebar/category', { categories: categories}) %>
+    <%- partial('../sidebar/tags',{tags:tags}) %>
+</aside>

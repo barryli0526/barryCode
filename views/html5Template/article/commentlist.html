@@ -1,0 +1,16 @@
+﻿<%comments.forEach(function(comment,i){%>
+<reply cid='<%=comment._id%>'>
+    <footer>
+        <div class="left avator">
+            <img src="http://uyan.cc/uploads/duface.png"/>
+        </div>
+        <div class="right time">
+            <cite><%=comment.user.nickname%></cite>
+            <time><%=comment.create_at%></time>
+        </div>
+    </footer>
+    <div class="commet-content">
+        <%-comment.content%>
+    </div>
+</reply>
+<%})%>

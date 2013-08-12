@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title></title> 
+    <style type="text/css"> 
+        body { 
+            margin: 10px; 
+        } 
+    </style> 
+    <script type="text/javascript"> 
+        var canvas; 
+        var context; 
+        var isWhite = true;
+        var isWell = false;
+        var img_b = new Image(); 
+        img_b.src = "../../img/demo/b.png";
+        var img_w = new Image(); 
+        img_w.src = "../../img/demo/w.png";
+  
+        var chessData = new Array(15);
+        for (var x = 0; x < 15; x++) { 
+            chessData[x] = new Array(15); 
+            for (var y = 0; y < 15; y++) { 
+                chessData[x][y] = 0; 
+            } 
+        } 
+  
+        function drawRect() {
+            canvas = document.getElementById("canvas"); 
+            context = canvas.getContext("2d"); 
+  
+            for (var i = 0; i <= 640; i += 40) {
+                context.beginPath(); 
+                context.moveTo(0, i); 
+                context.lineTo(640, i); 
+                context.closePath(); 
+                context.stroke(); 
+  
+                context.beginPath(); 
+                context.moveTo(i, 0); 
+                context.lineTo(i, 640); 
+                context.closePath(); 
+                context.stroke(); 
+            }
+
+            resetGame();
+            bingEvents();
+        }
+
+        function reStart(){
+            context.clearRect(0,0,640,640);
+            for(var i=0;i<15;i++)
+              for(var j=0;j<15;j++)
+                chessData[i][j] = 0;
+            isWhite = true;
+            isWell = false;
+        }
+
+        function play(e) {
+            var x = parseInt((e.clientX - 20) / 40);
+            var y = parseInt((e.clientY - 20) / 40);
+  
+            if (chessData[x][y] != 0) {
+                return; 
+            } 
+  
+            if (isWhite) { 
+                isWhite = false; 
+                drawChess(1, x, y); 
+            } 
+            else { 
+                isWhite = true; 
+                drawChess(2, x, y); 
+            }
+            saveGameState();
+            if(isWell)
+                localStorage['game.state'] = 'done';
+  
+        } 
+        function drawChess(chess, x, y) {
+            if (isWell == true) { 
+                alert("over!");
+                return; 
+            } 
+            if (x >= 0 && x < 15 && y >= 0 && y < 15) { 
+                if (chess == 1) { 
+                    context.drawImage(img_w, x * 40 + 20, y * 40 + 20);
+                    chessData[x][y] = 1; 
+                } 
+                else { 
+                    context.drawImage(img_b, x * 40 + 20, y * 40 + 20); 
+                    chessData[x][y] = 2; 
+                } 
+                judge(x, y, chess); 
+            } 
+        } 
+        function judge(x, y, chess) {
+            var count1 = 0; 
+            var count2 = 0; 
+            var count3 = 0; 
+            var count4 = 0; 
+  
+
+            for (var i = x; i >= 0; i--) { 
+                if (chessData[i][y] != chess) { 
+                    break; 
+                } 
+                count1++; 
+            } 
+            for (var i = x + 1; i < 15; i++) { 
+                if (chessData[i][y] != chess) { 
+                    break; 
+                } 
+                count1++; 
+            } 
+
+            for (var i = y; i >= 0; i--) { 
+                if (chessData[x][i] != chess) { 
+                    break; 
+                } 
+                count2++; 
+            } 
+            for (var i = y + 1; i < 15; i++) { 
+                if (chessData[x][i] != chess) { 
+                    break; 
+                } 
+                count2++; 
+            } 
+
+            for (var i = x, j = y; i >= 0, j >= 0; i--, j--) { 
+                if (chessData[i][j] != chess) { 
+                    break; 
+                } 
+                count3++; 
+            } 
+            for (var i = x + 1, j = y + 1; i < 15, j < 15; i++, j++) { 
+                if (chessData[i][j] != chess) { 
+                    break; 
+                } 
+                count3++; 
+            } 
+
+            for (var i = x, j = y; i >= 0, j < 15; i--, j++) { 
+                if (chessData[i][j] != chess) { 
+                    break; 
+                } 
+                count4++; 
+            } 
+            for (var i = x + 1, j = y - 1; i < 15, j >= 0; i++, j--) { 
+                if (chessData[i][j] != chess) { 
+                    break; 
+                } 
+                count4++; 
+            } 
+  
+            if (count1 >= 5 || count2 >= 5 || count3 >= 5 || count4 >= 5) { 
+                if (chess == 1) { 
+                    alert("white player win");
+                } 
+                else { 
+                    alert("black player win");
+                } 
+                isWell = true;
+
+            } 
+        }
+
+        function isSupportLocalStorage(){
+            try{
+                return 'localStorage' in window && window['localStorage'] != null;
+            }catch(e){
+                return false;
+            }
+        }
+
+        function saveGameState(){
+            if(!isSupportLocalStorage()){
+                return false;
+            }
+            localStorage['game.state'] = 'inprogress';
+            localStorage['chessData'] = JSON.stringify(chessData);
+            localStorage['player'] =  isWhite;
+
+        }
+
+        function resetGame(){
+            if(!isSupportLocalStorage()){
+                return;
+            }
+
+          //  if(localStorage['game.state'] != 'inprogress'){
+          ///      return;
+          //  }
+
+            chessData = JSON.parse(localStorage['chessData']);
+            for(var i=0;i<15;i++){
+                for(var j=0;j<15;j++){
+                    if(chessData[i][j] == 1){
+                        context.drawImage(img_w, i * 40 + 20, j * 40 + 20);//绘制白棋
+                    }else if(chessData[i][j] == 2){
+                        context.drawImage(img_b, i * 40 + 20, j * 40 + 20);
+                    }
+                }
+            }
+            isWhite = localStorage['player'] === 'true';
+            isWell = localStorage['game.state'] == 'done';
+        }
+
+        function handle_storage(e){
+            if(!e){
+                e = window.event;
+            }
+           console.log('save data!!!');
+        }
+
+        function bingEvents(){
+
+            var btn = document.querySelector('.btn');
+            btn.onclick = function(){
+                localStorage.clear();
+                reStart();
+                drawRect();
+                localStorage['game.state'] = 'inprogress';
+            }
+
+            if(window.addEventListener){
+              window.addEventListener('storage', handle_storage, false);
+            }else{
+              window.attachEvent('onstorage', handle_storage);
+            }
+        }
+
+    </script> 
+</head> 
+<body onload="drawRect()"> 
+    <div> 
+        <canvas width="640" id="canvas" onmousedown="play(event)" height="640">please use any other browser which support HTML5!!!
+        </canvas>
+        <button class="btn" value="reset">reset</button>
+    </div> 
+  
+</body> 
+</html>

@@ -1,0 +1,10 @@
+<nav>
+    <h3>博客</h3>
+    <div>
+        <ol>
+            <%articles.forEach(function(article, i){%>
+            <li><a href="/articles/detail/<%=article._id%>"><%=article.article_title%></a></li>
+            <%})%>
+        </ol>
+    </div>
+</nav>

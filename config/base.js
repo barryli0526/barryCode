@@ -17,6 +17,9 @@ exports.config = {
     upload_dir: 'public/user_data/images',
     image_maxAge: 3600000 *24 * 30,
 
+    theme:'html5Template',
+    //theme:'default',
+
     db: 'mongodb://127.0.0.1/microbloge',
     session_secret: 'dida',
     auth_cookie_name: 'dida',

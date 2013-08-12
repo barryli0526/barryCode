@@ -34,7 +34,7 @@ client.flushdb();
 var app = express.createServer();
 
 app.configure(function () {
-  var viewsRoot = path.join(__dirname, 'views');
+  var viewsRoot = path.join(__dirname, 'views',config.theme);
   app.set('view engine', 'html');
   app.set('views', viewsRoot);
   app.register('.html', require('ejs'));

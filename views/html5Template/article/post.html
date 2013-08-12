@@ -1,0 +1,16 @@
+<article class="post" articleid=<%=article._id%>>
+    <header>
+        <h1><a href="/articles/detail/<%=article._id%>"><%=article.article_title%></a></h1>
+        <div>
+            <time pubdate="" datetime="<%=article.post_time%>"><%=article.post_time%></time>
+            <strong>目录:</strong>
+            <% article.category.forEach(function(category, index) { %>
+            <a href="/category/<%=category._id%>"><%=category.category_name%></a>
+            <%})%>
+            <em> <a href="/articles/detail/<%=article._id%>#comments"><%=article.info.reply_count%> Comments</a></em>
+        </div>
+    </header>
+    <div class="content">
+        <%=article.article_content%>
+    </div>
+</article>

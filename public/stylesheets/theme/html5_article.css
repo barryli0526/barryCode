@@ -1,0 +1,332 @@
+body{
+    background:url('../../assets/linen-white.jpg') repeat;
+}
+
+ol,li,ul{
+    list-style:none;
+}
+
+a{
+    color:#333;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/*index page*/
+#paper{
+    width:100%;
+    height:685px;
+}
+
+#paper image{
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+/*end */
+
+
+#container_wrapper
+{
+    margin:0 auto;
+    width: 940px;
+    padding:20px;
+    margin-top: 20px;
+    position: relative;
+    background-color:#fff;
+}
+
+#container_wrapper::after{
+    position:absolute;
+    left:0px;
+    top:0px;
+    display:block;
+    content:'';
+    width:100%;
+    height:100%;
+    background:url('../../assets/blog_bg.png');
+}
+
+#container
+{
+    position: relative;
+    z-index:1;
+}
+
+
+
+#main
+{
+    width: 600px;
+    padding: 10px;
+    min-height: 1473px;
+}
+
+article, #reply,.commentArea
+{
+    padding: 19px;
+    margin-bottom: 10px;
+    border:1px solid #e6e6e6;
+    border-top:3px solid #ccc;
+}
+article h1, #reply h1, .demoTitle, #points,form header p
+{
+    line-height: 20px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    font-weight: bold;
+}
+article header > div, article header > div a, #reply header > div, #reply header > div a
+{
+    color: #808080;
+}
+article header > div, #reply header > div,.commentArea header > div
+{
+    height: 34px;
+    line-height: 34px;
+    font-size: 11px;
+    margin-top: 5px;
+    border-bottom:1px solid #cfcfcf;
+    position: relative;
+}
+article header time, #reply header time
+{
+    display: inline;
+}
+article header > div em, #reply header > div em
+{
+    top: 0px;
+    right: 0px;
+    font-style: normal;
+    font-weight: bold;
+    position: absolute;
+}
+article > footer
+{
+    text-align: right;
+}
+
+#reply::after
+{
+    content:".";
+    height:0;
+    visibility:hidden;
+    display:block;
+    clear:both
+}
+
+reply
+{
+    padding:20px 0px 32px 0px;
+    border-top:1px solid #ddd;
+    float: left;
+}
+
+reply  footer
+{
+    margin-bottom:20px;
+    float:left;
+}
+
+reply .avator
+{
+    float:left;
+}
+
+reply .avator img
+{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+reply cite
+{
+    margin-left:10px;
+    line-height: 28px;
+    color:#404040;
+    font-style:normal;
+}
+
+reply .time
+{
+    float:left;
+
+}
+
+reply time
+{
+    font-size:12px;
+    color:#aaa;
+}
+
+reply .commet-content
+{
+    clear:both;
+    margin-left:56px;
+    color:#404040;
+    font-size:12px;
+}
+
+.commentArea header
+{
+    margin-bottom:20px;
+}
+
+.commentArea .nav a
+{
+    color:#08c;
+    text-decoration:none;
+}
+
+.commentArea .nav
+{
+    padding:0px;
+}
+
+.commentArea .form-actions
+{
+     padding-bottom:0px;
+     margin-bottom:0px;
+}
+
+
+
+.content
+{
+    letter-spacing: 0.1em;
+    padding-top: 14px;
+}
+.content p
+{
+    line-height: 24px;
+    font-size: 14px;
+}
+.content p a
+{
+    color: #e75836;
+    border:1px dotted #ccc;
+}
+.content h3
+{
+    font-family: "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+}
+.content p, .content img, .content h3, .content h4, .content pre, .content ul, .content ol, .content blockquote, .content table, .content dl
+{
+    margin-bottom: 24px;
+}
+
+#pages, #comments
+{
+    padding: 19px;
+    font-family: "宋体";
+    font-size: 12px;
+    border:1px solid #e6e6e6;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+#pages a
+{
+    color: #666;
+    padding: 6px 7px;
+    position: relative;
+    background-color: rgb(230, 230, 230);
+    cursor:pointer;
+}
+#pages b
+{
+    color: #fff;
+    padding: 6px 7px;
+    position: relative;
+    background-color: rgb(179, 179, 179);
+}
+
+#bar
+{
+    top: 0px;
+    width: 300px;
+    right: 0px;
+    padding:20px 0px;
+    font-size: 12px;
+    position: absolute;
+}
+
+#bar h3
+{
+    font-family: "微软雅黑";
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+aside{
+    font-size:12px;
+    line-height:1;
+}
+
+aside a
+{
+    cursor:pointer;
+    color:#333;
+    text-decoration:none;
+}
+
+aside a:hover{
+    text-decoration:underline;
+}
+
+aside ul, aside ol
+{
+    line-height: 24px;
+    padding: 9px;
+    margin:0px;
+    border:1px solid #e6e6e6;
+    background-color: rgb(255, 255, 255);
+}
+aside li
+{
+    padding-left: 9px;
+    background: url("../../assets/arrow.png") no-repeat;
+
+}
+
+#weibo, #bar nav div
+{
+    padding: 9px;
+    border:1px solid #e6e6e6;
+    border-top:3px solid #ccc;
+    background-color: rgb(241, 241, 241);
+}
+#bar section, #bar nav
+{
+    margin-bottom: 15px;
+}
+
+/*reader begin*/
+
+.content p{
+    text-indent: 2em;
+    margin-bottom:0.8em;
+    text-justify: inter-ideograph;
+    word-wrap: break-word;
+}
+
+.preload{
+    display:block;
+    width:32px;
+    height:32px;
+    background:url(/img/preloader.gif) no-repeat;
+}
+
+.feedcontent
+{
+    min-height:900px;
+}
+
+
+/*reader end*/

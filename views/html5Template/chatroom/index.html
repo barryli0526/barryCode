@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/stylesheets/bootstrap-responsive.min.css" rel="stylesheet"/>
+    <link href="/stylesheets/chat.css" rel="stylesheet"/>
+    <script src='/javascript/vendor/jquery-1.9.1.min.js'></script>
+</head>
+<body>
+  <div id="mainWrapper">
+      <div id="head" class="row">
+          <select name="group" class="group">
+              <option value="">group1</option>
+              <option value="">group2</option>
+              <option value="">group3</option>
+          </select>
+
+          <select name="status" class="status">
+              <option value="">avaliable</option>
+              <option value="">busy</option>
+              <option value="">away</option>
+          </select>
+      </div>
+      <div id="mainContent" class="container-fluid">
+          <div class="row-fluid">
+          <div class="leftBar span2">
+              <ul class="nav" id="userlist">
+                  <%userlist.forEach(function(user,i){
+                    if(user.username != current_user.nickname){
+                  %>
+                  <li class="user" id="<%=user.sid%>">
+                      <a>
+                          <img src="http://www.gravatar.com/avatar/74bb09af96c486d9d72891626dd51df8.png"/>
+                          <span class="name"><%=user.username%></span>
+                          <span class="status"><%=user.status%></span>
+                      </a>
+                  </li>
+                  <%}});%>
+              </ul>
+          </div>
+
+          <div class="rightBar span10">
+             <div class="chatcontent"></div>
+              <input type="text" class="chat"/>
+              <input type="button" class="submit" value="fayan"/>
+          </div>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="/javascript/dev/socket.js"></script>
+</body>
+</html>
