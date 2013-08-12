@@ -10,3 +10,4 @@ exports.Log = require('./log');
 exports.Relation = require('./relation');
 exports.Tag = require('./tag');
 exports.UserInfo = require('./userInfo');
+exports.LabProduct = require('./labProduct');

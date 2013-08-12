@@ -9,6 +9,7 @@ var uploader = require('./controllers/upload');
 var feed = require('./controllers/feed');
 var chat = require('./controllers/chat');
 var demoList = require('./controllers/demoList');
+var lab = require('./controllers/lab');
 
 
 var fs = require('fs');
@@ -106,5 +107,12 @@ module.exports = function (app, client) {
           layout:false
       })
   }) */
+
+  //lab
+  app.get('/lab',lab.index);
+  app.get('/lab/:pageid', lab.showPage);
+  app.post('/lab/save',lab.save);
+  app.get('/lab/:pageid/edit', lab.edit);
+  app.post('/lab/create', lab.create);
 
 };

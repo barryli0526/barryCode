@@ -16,6 +16,8 @@ exports.config = {
 
     upload_dir: 'public/user_data/images',
     image_maxAge: 3600000 *24 * 30,
+    lab_content_idr:'public/user_data/lab',
+    lab_maxAge : 365 * 24 * 30,
 
     theme:'html5Template',
     //theme:'default',

@@ -30,7 +30,6 @@ if(process.env.REDISTOGO_URL){
 client.flushdb();
 
 
-
 var app = express.createServer();
 
 app.configure(function () {

@@ -1,0 +1,873 @@
+
+.NightTheme .activeline
+{
+    background-image: none !important;
+    background-attachment: scroll !important;
+    background-repeat: repeat !important;
+    background-position-x: 0% !important;
+    background-position-y: 0% !important;
+    background-size: auto !important;
+    background-origin: padding-box !important;
+    background-clip: border-box !important;
+    background-color: rgb(51, 51, 51) !important;
+}
+.NightTheme
+{
+    background-color: rgb(44, 52, 55);
+}
+.NightTheme .header
+{
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+}
+.NightTheme .explorer
+{
+    border-right-color: currentColor;
+    border-right-width: medium;
+    border-right-style: none;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.7);
+    background-color: rgb(255, 255, 255);
+}
+.NightTheme .editorSet .editor
+{
+    border-top-color: rgb(22,26,27);
+    border-right-color: rgb(22,26,27);
+    border-bottom-color: rgb(22,26,27);
+    border-left-color: rgb(22,26,27);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    box-shadow: inset 0px 1px 3px rgb(22,26,27);
+}
+.NightTheme .CodeMirror
+{
+    background-color: rgb(255, 255, 255);
+}
+.NightTheme .headerMenu
+{
+    background-image: url("../img/bg-black.gif");
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.NightTheme .menuItem
+{
+    color: #fff;
+}
+.NightTheme .toolItem
+{
+    color: #fff;
+}
+.NightTheme .explorer
+{
+    background-color: rgb(51, 59, 61);
+}
+.NightTheme .explorer .title
+{
+    color: #ccc;
+}
+.NightTheme .explorer .maintitle
+{
+    color: #fff;
+    border-bottom-color: rgb(38,51,57);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.NightTheme .add_project
+{
+    background-image: url("http://runjs.cn/img/runjs_icon-black.gif");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: -88px;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.NightTheme .project .title, .NightTheme .project .title a
+{
+    color: #ccc;
+}
+.NightTheme .prj_selected .title a
+{
+    color: #debd00;
+}
+.NightTheme .project .title .rename
+{
+    color: #175977;
+    background-image: url("/img/runjs_icon-black.gif");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position-x: 9px;
+    background-position-y: 8px;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.NightTheme .explorer li.tip
+{
+    color: #fff;
+}
+.NightTheme .explorer li.tip a
+{
+    color: #debd00;
+}
+.NightTheme .btn
+{
+    border-top-color: rgb(22,16,24);
+    border-right-color: rgb(22,16,24);
+    border-bottom-color: rgb(22,16,24);
+    border-left-color: rgb(22,16,24);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+.NightTheme .arrow_bottom
+{
+    border-top-color: transparent;
+    border-right-color: #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+.NightTheme .arrow_bottom_blue
+{
+    border-top-color: transparent;
+    border-right-color: #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+.NightTheme .btnGroup
+{
+    box-shadow: inset 0px 1px 1px rgb(170,170,170), 0px 1px 3px rgb(22,34,40);
+}
+.NightTheme .menuItem .select
+{
+    border-top-color: #161018;
+    border-right-color: #161018;
+    border-bottom-color: #161018;
+    border-left-color: #161018;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+.NightTheme .menuItem .select ul li a
+{
+    color: #fff;
+}
+.NightTheme .toolItem .select ul, .NightTheme .menuItem .select ul
+{
+    border-top-color: rgb(23,34,40);
+    border-right-color: rgb(23,34,40);
+    border-bottom-color: rgb(23,34,40);
+    border-left-color: rgb(23,34,40);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+.NightTheme .toolItem .select .title
+{
+    border-top-color: rgb(28,36,38);
+    border-right-color: rgb(28,36,38);
+    border-bottom-color: rgb(28,36,38);
+    border-left-color: rgb(28,36,38);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    background-color: rgb(52, 62, 64);
+}
+.NightTheme .select ul
+{
+    background-color: rgb(44, 52, 55);
+}
+.NightTheme .mainproject, .NightTheme .mainresource
+{
+    border-top-color: rgb(38,51,57);
+    border-right-color: rgb(38,51,57);
+    border-bottom-color: rgb(38,51,57);
+    border-left-color: rgb(38,51,57);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+.NightTheme .handler_horizontal
+{
+    background-image: url("/img/handle-h-b.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 3px;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.NightTheme .handler_vertical
+{
+    background-image: url("/img/handle-v-b.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.NightTheme .on.fold_control
+{
+    background-image: url("/img/bl.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: 50%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td
+{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+body, table, input, textarea, select
+{
+    font-family: 微软雅黑, Verdana, sans-serif, 宋体;
+}
+body
+{
+    position: relative;
+    background-color: rgb(246, 246, 246);
+}
+fieldset, img
+{
+    border-top-color: currentColor;
+    border-right-color: currentColor;
+    border-bottom-color: currentColor;
+    border-left-color: currentColor;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+}
+ol, ul
+{
+    list-style-type: none;
+    list-style-position: outside;
+    list-style-image: none;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 100%;
+    font-weight: normal;
+}
+body
+{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+fieldset, img
+{
+    border-top-color: currentColor;
+    border-right-color: currentColor;
+    border-bottom-color: currentColor;
+    border-left-color: currentColor;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+}
+.header
+{
+    height: 48px;
+    position: relative;
+    z-index: 2;
+    min-width: 1000px;
+}
+.logo
+{
+    width: 70px;
+    height: 34px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    margin-left: 20px;
+    position: absolute;
+    cursor: pointer;
+    background-image: url("/img/logo.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: center;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.logo h1
+{
+    display: none;
+}
+.core
+{
+    height: 100%;
+    position: relative;
+}
+.core_margin
+{
+    margin-top: 5px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    margin-left: 230px;
+}
+.explorer
+{
+    width: 210px;
+    height: 100%;
+    overflow: auto;
+    padding-top: 5px;
+    border-top-color: currentColor;
+    border-top-width: medium;
+    border-top-style: none;
+    position: absolute;
+}
+.toolBar
+{
+    width: 100%;
+    height: 30px;
+    line-height: 24px;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    font-size: 14px;
+    margin-left: -5px;
+    min-width: 870px;
+}
+.editor_wrapper
+{
+    position: relative;
+}
+.editorSet
+{
+    width: 40%;
+    height: 100%;
+}
+.editorSet .editor
+{
+    width: 100%;
+    height: 50%;
+    overflow-y: hidden;
+}
+.core textarea, .core iframe
+{
+    border-top-color: currentColor !important;
+    border-right-color: currentColor !important;
+    border-bottom-color: currentColor !important;
+    border-left-color: currentColor !important;
+    border-top-width: 0px !important;
+    border-right-width: 0px !important;
+    border-bottom-width: 0px !important;
+    border-left-width: 0px !important;
+    border-top-style: none !important;
+    border-right-style: none !important;
+    border-bottom-style: none !important;
+    border-left-style: none !important;
+    min-height: 100px;
+    min-width: 100px;
+}
+.quick_tools
+{
+    top: 5px;
+    height: 20px;
+    text-align: center;
+    right: 20px;
+    color: #bbb;
+    line-height: 20px;
+    padding-top: 0px;
+    padding-right: 6px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    font-size: 11px;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: rgba(230, 230, 230, 0.5);
+}
+.quick_tools span
+{
+    cursor: pointer;
+}
+.quick_tools span a
+{
+    color: #bbb;
+    text-decoration: none;
+}
+.quick_tools img
+{
+    padding-top: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.quick_tools span
+{
+    vertical-align: middle;
+}
+.editor iframe
+{
+    width: 100%;
+    height: 100%;
+}
+fieldset.left
+{
+    left: -5px;
+    position: absolute;
+}
+fieldset.right
+{
+    right: -5px;
+    position: absolute;
+}
+.top
+{
+    top: -5px;
+    position: absolute;
+}
+.bottom
+{
+    bottom: -5px;
+    position: absolute;
+}
+.CodeMirror
+{
+    height: 100%;
+}
+.CodeMirror-scroll
+{
+    height: 100%;
+    overflow: auto;
+}
+.handler_horizontal
+{
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 8px;
+    padding-top: 0px;
+    padding-right: 1px;
+    padding-bottom: 0px;
+    padding-left: 1px;
+    position: absolute;
+    cursor: row-resize;
+}
+.handler_vertical
+{
+    left: 0px;
+    width: 8px;
+    height: 100%;
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    position: absolute;
+    cursor: col-resize;
+    background-image: url("/img/handle-v.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position-x: 3px;
+    background-position-y: 50%;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.headerMenu
+{
+    height: 33px;
+    line-height: 26px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    padding-left: 215px;
+    font-size: 14px;
+    min-width: 900px;
+}
+.menuItem
+{
+    height: 26px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    float: left;
+}
+.toolItem
+{
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    float: left;
+}
+.explorer a
+{
+    text-decoration: none;
+}
+.explorer .title
+{
+    height: 28px;
+    line-height: 28px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+.explorer .maintitle
+{
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#my_project, #my_resource
+{
+    font-weight: bold;
+}
+.add_project
+{
+    width: 22px;
+    height: 22px;
+    border-top-color: currentColor;
+    border-right-color: currentColor;
+    border-bottom-color: currentColor;
+    border-left-color: currentColor;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    float: right;
+    cursor: pointer;
+}
+.explorer .projects
+{
+    overflow-y: auto;
+}
+.projects .prj_selected .title
+{
+    font-weight: bold;
+}
+.projects .project
+{
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.project .title .title_name
+{
+    width: 70%;
+    height: 30px;
+    overflow: hidden;
+    padding-left: 12px;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+}
+.project .title .rename
+{
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    float: right;
+    display: none;
+}
+.explorer li.tip
+{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+.fold_control
+{
+    left: 215px;
+    top: 0px;
+    width: 7px;
+    height: 100%;
+    bottom: 0px;
+    position: absolute;
+    cursor: pointer;
+}
+.login
+{
+    float: right;
+}
+.arrow_bottom
+{
+    width: 6px;
+    border-top-width: 6px;
+    border-right-width: 6px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: dashed;
+    border-right-style: solid;
+    border-bottom-style: dashed;
+    border-left-style: dashed;
+    display: inline-block;
+}
+.arrow_bottom_blue
+{
+    width: 6px;
+    border-top-width: 6px;
+    border-right-width: 6px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: dashed;
+    border-right-style: solid;
+    border-bottom-style: dashed;
+    border-left-style: dashed;
+    display: inline-block;
+}
+.btn
+{
+    height: 26px;
+    line-height: 26px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    float: left;
+    cursor: pointer;
+}
+#prelogin, #logout
+{
+    border-right-color: currentColor;
+    border-right-width: medium;
+    border-right-style: none;
+}
+#editor_setting
+{
+    border-left-color: currentColor;
+    border-left-width: medium;
+    border-left-style: none;
+}
+.btnGroup .btn
+{
+    float: left;
+}
+#msg_count
+{
+    top: 5px;
+    height: 10px;
+    text-align: center;
+    right: 120px;
+    color: white;
+    line-height: 10px;
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    min-width: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    background-color: rgb(255, 113, 112);
+}
+.menuItem .select
+{
+    height: 26px;
+    float: left;
+    cursor: pointer;
+}
+.menuItem .select ul
+{
+    top: 37px;
+    width: 92px;
+    border-top-color: #ccc;
+    border-right-color: #ccc;
+    border-bottom-color: #ccc;
+    border-left-color: #ccc;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    z-index: 999;
+}
+.menuItem .select ul li a
+{
+    text-decoration: none;
+    display: block;
+}
+.toolItem .select
+{
+    height: 24px;
+    cursor: pointer;
+}
+.toolItem .select ul
+{
+    top: 30px;
+    z-index: 100;
+}
+.toolItem .select .title
+{
+    line-height: 24px;
+    font-size: 12px;
+}
+.select ul
+{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.select li
+{
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+.select .title
+{
+    text-align: center;
+    line-height: 26px;
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+}
+.view
+{
+    margin-right: 5px;
+    float: left;
+}
+.view input
+{
+    margin-right: 5px;
+}
+.view_control
+{
+    left: 500px;
+    position: absolute;
+}
+.mainproject, .mainresource
+{
+    overflow: auto;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.mainproject
+{
+    height: 65%;
+}
+.mainresource
+{
+    height: 30%;
+}
+.NightTheme .activeline
+{
+    background-image: none !important;
+    background-attachment: scroll !important;
+    background-repeat: repeat !important;
+    background-position-x: 0% !important;
+    background-position-y: 0% !important;
+    background-size: auto !important;
+    background-origin: padding-box !important;
+    background-clip: border-box !important;
+    background-color: rgb(51, 51, 51) !important;
+}
+.NightTheme .toolItem .select ul li.lib_name
+{
+    background-color: rgb(102, 102, 102);
+}

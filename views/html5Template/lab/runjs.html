@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML Strict//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+    <!--codemirror-->
+    <link href="/libs/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
+    <script src="/libs/codemirror/lib/codemirror.js" type="text/javascript"></script>
+    <script src="/libs/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="/libs/codemirror/mode/css/css.js" type="text/javascript"></script>
+    <script src="/libs/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="/libs/codemirror/mode/htmlembedded/htmlembedded.js" type="text/javascript"></script>
+    <script src="/libs/codemirror/addon/edit/matchbrackets.js" type="text/javascript"></script>
+    <script src="/libs/codemirror/mode/xml/xml.js" type="text/javascript"></script>
+    <link href="/libs/codemirror/doc/docs.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/codemirror/theme/ambiance.css" rel="stylesheet" type="text/css" />
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <link href="/stylesheets/runjs.css" rel="stylesheet" type="text/css" />
+    <script src="/javascript/runjs.js" type="text/javascript"></script>
+
+</head>
+<body class="NightTheme">
+<div id="main_container">
+<div class="header">
+    <a href="/">
+        <div class="logo">
+            <h1>
+                RunJS</h1>
+        </div>
+    </a>
+    <div class="headerMenu">
+        <div class="menuItem btnGroup login">
+            <div class="select" id="logout">
+                <span id="msg_count" style="display: none;">0</span>
+                <div class="title">
+                    巴瑞力
+                    <div class="arrow_bottom">
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="javascript:runjs.logout();">退出登录</a> </li>
+                </ul>
+            </div>
+            <div class="btn" id="prelogin" style="display: none;" onclick='javascript:runjs.dialog.get("login");'>
+                登录
+            </div>
+            <div class="btn" id="help">
+                帮助(<span style="text-decoration: underline;">F1</span>)
+            </div>
+            <div class="btn" id="editor_setting">
+                设置
+            </div>
+        </div>
+        <div class="btnGroup menuItem">
+            <div class="btn" id="save">
+                更新(<span style="text-decoration: underline;">S</span>)
+            </div>
+            <div class="btn publish" style="border-left-color: currentColor; border-left-width: 0px;
+                        border-left-style: none;">
+                发布
+            </div>
+            <div class="btn share" id="share" style="border-right-color: currentColor; border-left-color: currentColor;
+                        border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;">
+                分享
+            </div>
+            <div class="btn" id="fork" onclick="runjs.checkProxy('fork');">
+                Fork
+            </div>
+        </div>
+        <div class="view_control menuItem">
+            <div class="view">
+                视图：
+            </div>
+            <div class="view">
+                <input id="html_view" type="checkbox" checked="checked" /><label for="html_view">HTML</label>
+            </div>
+            <div class="view">
+                <input id="js_view" type="checkbox" checked="checked" /><label for="js_view">JavaScript</label>
+            </div>
+            <div class="view">
+                <input id="css_view" type="checkbox" checked="checked" /><label for="css_view">CSS</label>
+            </div>
+            <div class="view">
+                <input id="pre_view" type="checkbox" checked="checked" /><label for="pre_view">预览</label>
+            </div>
+        </div>
+    </div>
+</div>
+<%if(typeof current_user !== 'undefined'){%>
+<div class="explorer" style="height: 876px;">
+    <div class="mainproject">
+        <div class="maintitle" id="my_project">
+            我的代码
+            <div title="创建新代码" class="add_project" id="create_project">
+            </div>
+        </div>
+        <ul class="projects">
+            <li class="project prj_selected" id="code_36429">
+                <%if(typeof content !== 'undefined'){%>
+                <div class="title">
+                    <a title="test" class="title_name" href="javascript:runjs.loadCode('6ilwbnov');"><%=content.name%></a>
+                    <a title="代码管理" class="rename" id="code_menu_6ilwbnov" href="javascript:runjs.explorer.showCodeMenu($('#code_menu_6ilwbnov'),'6ilwbnov',35900);">
+                    </a>
+                </div>
+                <%}%>
+            </li>
+        </ul>
+    </div>
+    <div class="mainresource">
+        <div class="maintitle" id="my_resource">
+            资源文件
+            <div title="上传新资源" class="add_project" id="add_resource">
+            </div>
+        </div>
+        <ul class="resources projects">
+            <li class="tip">
+                <p style="color: #aaa;">
+                    还没有上传任何资源
+                </p>
+                <br />
+                <p>
+                    <a id="upload_now" href="">马上上传</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<%}%>
+
+<div class="fold_control on">
+</div>
+<div class="core core_margin" id="core">
+    <div class="toolBar">
+        <div class="toolItem library" id="jquery">
+            <div class="select">
+                <div class="title">
+                    Ajax 框架
+                    <div class="arrow_bottom_blue">
+                    </div>
+                </div>
+                <ul style="display: none;">
+                    <li title="jquery" class="lib_name">jQuery </li>
+                    <li title="jQuery 1.8.3" id="jquery_183">jQuery 1.8.3 </li>
+                    <li title="jQuery 1.8.2" id="jquery_182">jQuery 1.8.2 </li>
+                    <li title="jQuery 1.8.0" id="jquery_180">jQuery 1.8.0 </li>
+                    <li title="jQuery 1.7.2" id="jquery_172">jQuery 1.7.2 </li>
+                    <li title="jQuery 1.6.4" id="jquery_164">jQuery 1.6.4 </li>
+                    <li title="jQuery 1.5.1" id="jquery_151">jQuery 1.5.1 </li>
+                    <li title="jQuery 1.4.4" id="jquery_144">jQuery 1.4.4 </li>
+                    <li title="dojo" class="lib_name">Dojo </li>
+                    <li title="Dojo 1.8.1" id="dojo_181">Dojo 1.8.1 </li>
+                    <li title="Dojo 1.8.0" id="dojo_180">Dojo 1.8.0 </li>
+                    <li title="Dojo 1.6.0" id="dojo_160">Dojo 1.6.0 </li>
+                    <li title="Dojo 1.4.1" id="dojo_141">Dojo 1.4.1 </li>
+                    <li title="mootools" class="lib_name">MooTools </li>
+                    <li title="Mootools 1.4.5" id="mootools_145">Mootools 1.4.5 </li>
+                    <li title="Mootools 1.2.5" id="mootools_125">Mootools 1.2.5 </li>
+                    <li title="prototype" class="lib_name">Prototype </li>
+                    <li title="Prototype 1.7.1.0" id="prototype_1710">Prototype 1.7.1.0 </li>
+                    <li title="Prototype 1.7.0.0" id="prototype_1700">Prototype 1.7.0.0 </li>
+                    <li title="Prototype 1.6.1.0" id="prototype_1610">Prototype 1.6.1.0 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolItem library" id="jquery">
+            <div class="select">
+                <div class="title">
+                    移动开发框架
+                    <div class="arrow_bottom_blue">
+                    </div>
+                </div>
+                <ul style="display: none;">
+                    <li title="Sencha Touch 2.0.1.1" id="others_sencha_touch_2011">Sencha Touch 2.0.1.1
+                    </li>
+                    <li title="Zepto 1.0rc1" id="others_zepto_10rc1">Zepto 1.0rc1 </li>
+                    <li title="jquerymobile" class="lib_name">jQuery Mobile </li>
+                    <li title="jQuery Mobile 1.2.0" id="jquerymobile_120">jQuery Mobile 1.2.0 </li>
+                    <li title="jQuery Mobile 1.1.1" id="jquerymobile_111">jQuery Mobile 1.1.1 </li>
+                    <li title="jQuery Mobile 1.0.1" id="jquerymobile_101">jQuery Mobile 1.0.1 </li>
+                    <li title="jqmobi" class="lib_name">jqMobi </li>
+                    <li title="jqMobi.min.js" id="jqmobi_min">jqMobi.min.js </li>
+                    <li title="jq.ui.min.js" id="jqmobi1_ui">jq.ui.min.js </li>
+                    <li title="jq.popup.js" id="jqmobi2_ui">jq.popup.js </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolItem library" id="jquery">
+            <div class="select">
+                <div class="title">
+                    UI 框架
+                    <div class="arrow_bottom_blue">
+                    </div>
+                </div>
+                <ul style="display: none;">
+                    <li title="ExtJS 4.1.1a" id="others_extjs_411a">ExtJS 4.1.1a </li>
+                    <li title="jQuery easy UI 1.3.1" id="others_jquery_easyui_131">jQuery easy UI 1.3.1
+                    </li>
+                    <li title="DWZ UI 1.4.4" id="others_dwzui_144">DWZ UI 1.4.4 </li>
+                    <li title="bootstrap" class="lib_name">Bootstrap </li>
+                    <li title="Bootstrap v2.2.1" id="bootstrap_221">Bootstrap v2.2.1 </li>
+                    <li title="jqueryui" class="lib_name">jQuery UI </li>
+                    <li title="jQuery UI 1.9.1" id="jqueryui_191">jQuery UI 1.9.1 </li>
+                    <li title="yui" class="lib_name">YUI </li>
+                    <li title="YUI 3.3.0" id="yui_330">YUI 3.3.0 </li>
+                    <li title="YUI 2.8.2" id="yui_282">YUI 2.8.2 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolItem library" id="jquery">
+            <div class="select">
+                <div class="title">
+                    jQuery 插件
+                    <div class="arrow_bottom_blue">
+                    </div>
+                </div>
+                <ul style="display: none;">
+                    <li title="jQuery cookie" id="jqueryplugins1_jquery_cookie_13">jQuery cookie </li>
+                    <li title="jQuery forms 2.8.2" id="jqueryplugins2_jqueryform_282">jQuery forms 2.8.2
+                    </li>
+                    <li title="jQuery cookies 2.2.0" id="jqueryplugins3_jquery_cookies_220">jQuery cookies
+                        2.2.0 </li>
+                    <li title="jQuery validity 1.2.0" id="jqueryplugins4_jquery_validity_120">jQuery validity
+                        1.2.0 </li>
+                    <li title="jQuery uploadify 3.2" id="jqueryplugins5_jquery_uploadify_32">jQuery uploadify
+                        3.2 </li>
+                    <li title="jQuery jqGrid 4.4.1" id="jqueryplugins6_jquery_jqgrid_441">jQuery jqGrid
+                        4.4.1 </li>
+                    <li title="jQuery ColorBox 1.3.2" id="jqueryplugins7_jquery_colorbox_132">jQuery ColorBox
+                        1.3.2 </li>
+                    <li title="jQuery fancyBox 2.1.3" id="jqueryplugins8_fancybox_213">jQuery fancyBox 2.1.3
+                    </li>
+                    <li title="jQuery Rotate 2.2" id="jqueryplugins9_jquery_rotate_22">jQuery Rotate 2.2
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolItem library" id="jquery">
+            <div class="select">
+                <div class="title">
+                    HTML5 相关
+                    <div class="arrow_bottom_blue">
+                    </div>
+                </div>
+                <ul style="display: none;">
+                    <li title="Processing 1.4.1" id="others_processing_141">Processing 1.4.1 </li>
+                    <li title="ES5 shim 1.2.4" id="others_es5_shim_124">ES5 shim 1.2.4 </li>
+                    <li title="jQuery HTML5 Uploader" id="others_jquery_html5_uploader">jQuery HTML5 Uploader
+                    </li>
+                    <li title="jCanvaScript-1.5.18" id="others_jcanvascript_1518">jCanvaScript-1.5.18
+                    </li>
+                    <li title="CanvasText-0.4.1" id="others_canvastext_041">CanvasText-0.4.1 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolItem library" id="jquery">
+            <div class="select">
+                <div class="title">
+                    工具库
+                    <div class="arrow_bottom_blue">
+                    </div>
+                </div>
+                <ul style="display: none;">
+                    <li title="underscore 1.3.3" id="others_underscore_133">underscore 1.3.3 </li>
+                    <li title="Raphael 2.1.0" id="others_raphael_210">Raphael 2.1.0 </li>
+                    <li title="Sammy 0.6.3" id="others_sammy_063">Sammy 0.6.3 </li>
+                    <li title="Modernizr 2.6.2" id="others_modernizr_262">Modernizr 2.6.2 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolItem library" id="jquery">
+            <div class="select">
+                <div class="title">
+                    其他库
+                    <div class="arrow_bottom_blue">
+                    </div>
+                </div>
+                <ul style="display: none;">
+                    <li title="Wind.js 0.7.0" id="wind_070">Wind.js 0.7.0 </li>
+                    <li class="lib_name">others </li>
+                    <li title="zTree 3.4" id="others_ztree_34">zTree 3.4 </li>
+                    <li title="Backbone 0.9.1" id="others_backbone_091">Backbone 0.9.1 </li>
+                    <li title="CoffeeScript" id="others_coffeescript">CoffeeScript </li>
+                    <li title="Less 1.3.0" id="others_less_130">Less 1.3.0 </li>
+                    <li title="TwitterLib" id="others_twitterlib">TwitterLib </li>
+                    <li title="script.aculo.us 1.8.3" id="others_script_aculo_us_183">script.aculo.us 1.8.3
+                    </li>
+                    <li title="kinetic-v4.1.2" id="others_kinetic_v412">kinetic-v4.1.2 </li>
+                    <li title="AngularJS-1.0.3" id="others_angular_103">AngularJS-1.0.3 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolItem view">
+            <input id="js_switcher" type="checkbox" checked="" value="on" /><label for="js_switcher">启用JavaScript</label>
+        </div>
+        <div class="toolItem view">
+            <input id="preview_switcher" type="checkbox" checked="" value="on" /><label for="preview_switcher">启用实时预览</label>
+        </div>
+    </div>
+    <div class="editor_wrapper" style="height: 813px;">
+        <fieldset class="editorSet left">
+            <div class="editor html top">
+                <textarea id="code_html"
+                          rows="10" cols="40">
+                    <%=(typeof(content)!=='undefined' && content.html)?content.html : ''%>
+                          </textarea>
+            </div>
+            <div class="editor js bottom">
+                        <span class="quick_tools" style="display: none;"><span onclick="runjs.editor.chooseJsType();">
+                            JavaScript</span><img width="14" src="/img/arrow-out.png" /></span>
+                <textarea id="code_js" rows="10">
+                    <%=(typeof(content)!=='undefined' && content.js)?content.js : ''%>
+                </textarea>
+            </div>
+
+        </fieldset>
+        <div class="handler handler_vertical" style="left: 515px;">
+        </div>
+        <fieldset class="editorSet right">
+            <div class="editor css top">
+                        <span class="quick_tools" style="display: none;"><span onclick="runjs.editor.chooseCssType();">
+                            CSS</span><img width="14" src="/img/arrow-out.png" /></span>
+                <textarea id="code_css"
+                          rows="10" cols="40">
+                    <%=(typeof(content)!=='undefined' && content.css)?content.css : ''%>
+                          </textarea>
+            </div>
+            <div class="handler handler_horizontal" style="top: 402px;">
+            </div>
+            <div id="result" class="editor preview bottom">
+                        <span class="quick_tools" style="display: none;"><span><a href="http://sandbox.runjs.cn/show/6ilwbnov"
+                                                                                  target="_blank">预览</a> </span>
+                            <img width="14" src="/img/arrow-out.png" />
+                        </span>
+            </div>
+        </fieldset>
+    </div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿body {
+    max-width: 1000000rem;
+}
+
+.CodeMirror-hscrollbar
+{
+    display: none;
+}
+
+.CodeMirror
+{
+    height: 100%;
+}

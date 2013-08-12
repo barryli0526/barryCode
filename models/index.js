@@ -20,6 +20,7 @@ require('./relation');
 require('./tag');
 require('./user');
 require('./userInfo');
+require('./labProduct');
 
 exports.User = mongoose.model('User');
 exports.Article = mongoose.model('Article');
@@ -33,3 +34,4 @@ exports.CommentInfo = mongoose.model('CommentInfo');
 exports.Log = mongoose.model('Log');
 exports.Tag = mongoose.model('Tag');
 exports.UserInfo = mongoose.model('UserInfo');
+exports.LabProduct = mongoose.model('LabProduct');
