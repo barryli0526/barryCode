@@ -9,6 +9,7 @@ var config = require('./config/base').config;
 var routes = require('./routes');
 var socket = require('./sockets');
 var redis = require('redis');
+var lab = require('./controllers/lab');
 //var ejsfilter = require('./lib/ejs_filter');
 
 /**
@@ -58,6 +59,9 @@ app.configure(function () {
           return next();
       }
   })
+
+
+  app.use('/lab/', lab.getCommonInfo);
 });
 
 

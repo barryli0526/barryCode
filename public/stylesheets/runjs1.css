@@ -46,7 +46,7 @@ header ul li
 
 header dl
 {
-    margin: 0 18% 0 12%;
+    margin: 0 15% 0 9%;
 }
 /*#endregion*/
 /* ------------------artichure------------------*/
@@ -203,6 +203,7 @@ textarea
     height: 94%;
     width: 99%;
     border: none;
+    font-size: 14px;
 }
 
 .label
@@ -245,6 +246,21 @@ textarea
     cursor: pointer;
 }
 
+.treeview .add_project
+{
+    background:url('../assets/runjs_icon-black.gif') no-repeat;
+    background-position: 5px -88px;
+    width:22px;
+    height: 22px;
+    display:block;
+    float:right;
+}
+
+.treeview .prj_selected a.title_name
+{
+    color:#f5bf0f;
+}
+
 .treeview ul li > div
 {
     clear: both;
@@ -255,4 +271,55 @@ textarea
 .treeview div li
 {
     border: none;
+}
+
+/*file upload*/
+ .overlay
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    filter: alpha(opacity =60);
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 10000;
+}
+
+ .inputbox
+{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    height: 25.16em;
+    width: 52.42em;
+    margin: -12.58em 0 0 -26.21em;
+    overflow: hidden;
+    z-index: 10001;
+    color: #fff;
+    text-align: center;
+    background-color:white;
+    font-size: 12px;
+}
+
+ #fileupload
+{
+    position:absolute;
+    left:43%;
+    top:50%;
+}
+
+ .rdelete
+{
+    display:none;
+    float:right;
+    font-size:12px;
+    font-family:'微软雅黑';
+    color:gray;
+    cursor:pointer;
+}
+ .rdelete:hover
+{
+    color:white;
 }

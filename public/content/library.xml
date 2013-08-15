@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <library>
+        <group id="ajax" name="Ajax框架">
+          <list id="jquery" name="jQuery">
+              <title>jQuery</title>
+              <children>
+                  <item>
+                      <title>jQuery 2.0.3</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.10.2</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.9.1</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.8.3</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.8.2</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.8.0</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.7.2</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.6.4</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.5.1</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js</url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.4.4</title>
+                      <url>//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js</url>
+                  </item>
+              </children>
+          </list>
+          <list id="Dojo" name="Dojo">
+              <title>Dojo</title>
+              <children>
+                  <item>
+                      <title>Dojo 1.9.1</title>
+                      <url>//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js</url>
+                  </item>
+                  <item>
+                      <title>Dojo 1.8.1</title>
+                      <url>//ajax.googleapis.com/ajax/libs/dojo/1.8.1/dojo/dojo.js</url>
+                  </item>
+                  <item>
+                      <title>Dojo 1.8.0</title>
+                      <url>//ajax.googleapis.com/ajax/libs/dojo/1.8.0/dojo/dojo.js</url>
+                  </item>
+                  <item>
+                      <title>Dojo 1.6.0</title>
+                      <url>//ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.js</url>
+                  </item>
+                  <item>
+                      <title>Dojo 1.4.1</title>
+                      <url>//ajax.googleapis.com/ajax/libs/dojo/1.4.1/dojo/dojo.js</url>
+                  </item>
+              </children>
+          </list>
+          <list id="MooTools" name="MooTools">
+              <title>MonTools</title>
+              <children>
+                  <item>
+                      <title>MooTools 1.4.5</title>
+                      <url>//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js</url>
+                  </item>
+                  <item>
+                      <title>MooTools 1.2.5</title>
+                      <url>//ajax.googleapis.com/ajax/libs/mootools/1.2.5/mootools-yui-compressed.js</url>
+                  </item>
+              </children>
+            </list>
+          <list id="Prototype" name="Prototype">
+              <title>Prototype</title>
+              <children>
+                  <item>
+                      <title>Prototype 1.7.1.0</title>
+                      <url></url>
+                  </item>
+                  <item>
+                      <title>Prototype 1.7.1.0</title>
+                      <url>//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js</url>
+                  </item>
+                  <item>
+                      <title>Prototype 1.6.1.0</title>
+                      <url>//ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js</url>
+                  </item>
+              </children>
+          </list>
+        </group>
+        <group id="mobile" name="移动开发框架">
+          <list id="Sencha">
+              <title>Sencha Touch 2.0.1.1</title>
+              <url></url>
+          </list>
+          <list id="Zepto">
+              <title>Zepto 1.0rc1</title>
+              <url></url>
+          </list>
+          <list id="jQuery Mobile">
+              <title>jQuery Mobile</title>
+              <url></url>
+              <children>
+                  <item>
+                      <title>jQuery 1.2.0</title>
+                      <url></url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.1.1</title>
+                      <url></url>
+                  </item>
+                  <item>
+                      <title>jQuery 1.0.1</title>
+                      <url></url>
+                  </item>
+              </children>
+          </list>
+          <list id="jqMobi">
+            <title>jqMobi</title>
+            <children>
+                <item>
+                    <title>jqMobi.min.js</title>
+                    <url></url>
+                </item>
+                <item>
+                    <title>jq.ui.min.js</title>
+                    <url></url>
+                </item>
+                <item>
+                    <title>jq.popup.js</title>
+                    <url></url>
+                </item>
+            </children>
+          </list>
+        </group>
+        <group id="ui" name="UI 框架">
+            <list id="Extjs">
+                <title>Extjs 4.1.1a</title>
+                <url></url>
+            </list>
+            <list id="jQuery easy">
+                <title>jQuery easy UI 1.3.1</title>
+                <url></url>
+            </list>
+            <list id="DWZ">
+                <title>DWZ UI 1.4.4</title>
+                <url></url>
+            </list>
+            <list id="BootStrap">
+                <title>BootStrap</title>
+                <children>
+                  <item>
+                      <title>BootStrap v2.2.1</title>
+                      <url></url>
+                  </item>
+                </children>
+            </list>
+            <list id="jQueryUI">
+                <title>jQuery UI</title>
+                <children>
+                    <item>
+                        <title>jQuery UI 1.10.3</title>
+                        <url>//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js</url>
+                    </item>
+                </children>
+            </list>
+            <list id="YUI">
+                <title>YUI</title>
+                <children>
+                    <item>
+                        <title>YUI 3.3.0</title>
+                        <url></url>
+                    </item>
+                    <item>
+                        <title>YUI 2.8.2</title>
+                        <url></url>
+                    </item>
+                </children>
+            </list>
+        </group>
+        <group id="jQPlugin" name="jQuery 插件">
+            <list id="cookie">
+                <title>jQuery cookie</title>
+                <url></url>
+            </list>
+            <list id="forms">
+                <title>jQuery forms 2.8.2</title>
+                <url></url>
+            </list>
+            <list id="cookies">
+                <title>jQuery cookies2.2.0</title>
+                <url></url>
+            </list>
+            <list id="validity">
+                <title>jQuery  validity 1.2.0</title>
+                <url></url>
+            </list>
+            <list id="uploadify">
+                <title>jQuery uploadify 3.2</title>
+                <url></url>
+            </list>
+            <list id="jqGrid">
+                <title>jQuery jqGrid 4.4.1</title>
+                <url></url>
+            </list>
+            <list id="colorBox">
+                <title>jQuery ColorBox 1.3.2</title>
+                <url></url>
+            </list>
+            <list id="fancyBox">
+                <title>jQuery fancyBox 2.1.3</title>
+                <url></url>
+            </list>
+            <list id="Rotate">
+                <title>jQuery Rotate 2.2</title>
+                <url></url>
+            </list>
+       </group>
+        <group id="html5" name="HTML5相关">
+            <list id="process">
+                <title>Processing 1.4.1</title>
+                <url></url>
+            </list>
+            <list id="Es5">
+                <title>Es5 shim 1.2.4</title>
+                <url></url>
+            </list>
+            <list id="uploader">
+                <title>jQuery HTML5 Uploader</title>
+                <url></url>
+            </list>
+            <list id="jCanvaScript">
+                <title>jCanvaScript-1.5.18</title>
+                <url></url>
+            </list>
+            <list id="CanvasText">
+                <title>CanvasText-0.4.1</title>
+                <url></url>
+            </list>
+        </group>
+        <group id="tools" name="工具库">
+            <list id="undefscore">
+                <title>undefscore 1.3.3</title>
+                <url></url>
+            </list>
+            <list id="Raphael">
+                <title>Raphael 2.1.0</title>
+                <url></url>
+            </list>
+            <list id="Sammy">
+                <title>Sammy 0.6.3</title>
+                <url></url>
+            </list>
+            <list id="Modernizr">
+                <title>Modernizr 2.6.2</title>
+                <url></url>
+            </list>
+        </group>
+        <group id="other" name="其他库">
+            <list id="windjs">
+                <title>Wind.js 0.7.0</title>
+                <url></url>
+            </list>
+            <list id="others">
+                <title>others</title>
+                <url></url>
+            </list>
+            <list id="ztree">
+                <title>zTree 3.4</title>
+                <url></url>
+            </list>
+            <list id="backbone">
+                <title>Backbone 0.9.1</title>
+                <url></url>
+            </list>
+            <list id="coffeescript">
+                <title>CoffeeScript</title>
+                <url></url>
+            </list>
+            <list id="less">
+                <title>Less 1.3.0</title>
+                <url></url>
+            </list>
+            <list id="twitterlib">
+                <title>TwitterLib</title>
+                <url></url>
+            </list>
+            <list id="script.aculo.us">
+                <title>script.aculo.us 1.9.0</title>
+                <url>//ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js</url>
+            </list>
+            <list id="kinetic">
+                <title>kinetic-v4.1.2</title>
+                <url></url>
+            </list>
+            <list id="angularjs">
+                <title>AngularJS-1.0.7</title>
+                <url>//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js</url>
+            </list>
+        </group>
+   </library>
+</root>

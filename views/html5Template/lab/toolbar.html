@@ -1,0 +1,31 @@
+<%if(typeof library !== 'undefined'){%>
+<ul>
+    <%var group = library.find('library').findall('group');
+    group.forEach(function(gp){
+        var list = gp.findall('list');
+    %>
+    <li>
+        <a href="#"><%=gp.attrib.name%><span class="arrow"></span></a>
+        <%if(typeof list !== 'undefined' && list.length > 0){%>
+           <ul>
+               <%list.forEach(function(ls){
+                 var child = ls.find('children');
+                 var items = child ? child.findall('item') : null;
+                 var title = ls.find('title') ? ls.find('title') : '';
+                 var url = ls.find('url') ? ls.find('url').text : '';
+                 if((typeof items !== 'undefined') && (items !== null) && (items.length > 0)){
+                 %>
+                   <li class="catelog"><%=ls.find('title').text%></li>
+                   <%items.forEach(function(item){%>
+                     <li data-href="<%=item.find('url').text%>"><%=item.find('title').text%></li>
+                   <%});%>
+                 <%}else{%>
+               <li data-href="<%=url%>"><%=ls.find('title').text%></li>
+                 <%}%>
+               <%});%>
+           </ul>
+        <%}%>
+    </li>
+    <%})%>
+</ul>
+<%}%>

@@ -1,4 +1,9 @@
-var Get = require('../../dl').Get;
+//var Get = require('../../dl').Get;
+var labService = require('../../service/LabService');
+var dbHelper = require('../../dbHelper');
+var labProduct = dbHelper.LabProduct;
+var parset = require('../../service/Parser');
+var path = require('path');
 
 
 var testgetUserPost = function(){
@@ -22,4 +27,28 @@ var testgetReplies = function(){
 	});
 }
 
-testgetReplies();
+//testgetReplies();
+
+
+var arr = 'qqq,ggg'.split(',');
+
+//labProduct.AddResources('V3QZR',{'resources':arr},function(err, doc){
+ //       console.log(doc)
+//})
+//labProduct.removeAllResources('V3QZR',function(){
+
+//})
+
+//labProduct.removeResources('V3QZR',{'resources':['qqq']}, function(err,doc){
+//    console.log(doc);
+//})
+
+var filepath = path.resolve('../../public/content/library.xml');
+
+parset.xmlParser(filepath, function(err,doc){
+    var items = doc.find('library').findall('group');
+    items.forEach(function(item,i){
+        console.log(item.attrib.name);
+    })
+    //console.log(items)
+})

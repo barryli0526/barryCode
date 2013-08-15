@@ -42,4 +42,36 @@ exports.deleteAll = function(callback){
 
 }
 
+exports.getProductsByAuthorId = function(authorId, callback){
+    labProduct.find({author_id:authorId},'sid name', callback);
+}
+
+exports.AddResources = function(sid, resources, callback){
+    labProduct.findOneAndUpdate({sid:sid},{'$pushAll':resources}, function(err, doc){
+        if(err)
+            return callback(err);
+        return callback(err, doc);
+    })
+}
+
+exports.removeProductBySid = function(sid, callback){
+    labProduct.find({sid:sid}).remove(callback);
+}
+
+exports.removeAllResources = function(sid, callback){
+    labProduct.findOne({sid:sid}, function(err, doc){
+        doc.resources = [];
+        doc.save();
+        return callback(err);
+    })
+}
+
+exports.removeResources = function(sid, resources, callback){
+    labProduct.findOneAndUpdate({sid:sid},{'$pullAll':resources}, function(err, doc){
+        if(err)
+            return callback(err);
+        return callback(err, doc);
+    });
+}
+
 

@@ -21,6 +21,8 @@ $(function () {
         continueComments: "Enter",
         extraKeys: { "Ctrl-Q": "toggleComment" },
         theme: 'ambiance',
+        tabSize:2,
+        lineWrapping:true,
         mode: 'htmlembedded'
     });
 
@@ -30,6 +32,8 @@ $(function () {
         continueComments: "Enter",
         extraKeys: { "Ctrl-Q": "toggleComment" },
         theme: 'ambiance',
+        lineWrapping:true,
+        tabSize:2,
         mode: 'css'
     });
 
@@ -39,11 +43,13 @@ $(function () {
         continueComments: "Enter",
         extraKeys: { "Ctrl-Q": "toggleComment" },
         theme: 'ambiance',
+        lineWrapping:true,
+        tabSize:2,
         mode: 'javascript'
     });
 
 
-    var result = $("#result"), resultFrame;
+    var result = $("#code_pre"), resultFrame;
 
     function change(html) {
         result.find("iframe").remove();
@@ -62,6 +68,7 @@ $(function () {
         obj.html = editorHtml.getValue();
         obj.css = editorCss.getValue();
         obj.js = editorJs.getValue();
+
         return obj;
     }
 
@@ -85,10 +92,15 @@ $(function () {
 
     }
 
-    $('#save').click(function(){
+    function preiviewContent(){
         var data = getContent();
         var html  =  getCombinedHtml(data);
         change(html);
+    }
+
+    $('#preview').click(function(){
+        preiviewContent();
+        return false;
     })
 
     $(".publish").click(function () {
@@ -96,10 +108,15 @@ $(function () {
         var html  =  getCombinedHtml(data);
        // change(html);
 
-        var pathname = location.pathname.split('/')[2];
+        var sid = location.pathname.split('/')[2];
 
-        data.id = pathname;
+        if(!sid){
+            sid = $('.prj_selected').attr('id');
+        }
+
+        data.id = sid;
         data.content = html;
+
 
         $.ajax({
             url:'/lab/save',
@@ -110,7 +127,29 @@ $(function () {
                 location.href = '/lab/'+data;
             }
         })
+        return false;
     });
+
+    function saveProject(){
+        var data = getContent();
+        var sid = location.pathname.split('/')[2];
+
+        if(!sid){
+            sid = $('.prj_selected').attr('id');
+        }
+
+        $.ajax({
+            url:'/lab/'+sid,
+            type:'put',
+            data:data,
+            success:function(data){
+                if(data && data.status == 'success')
+                    preiviewContent();
+            }
+        })
+    }
+
+    $("#save").bind('click', saveProject);
 
     function makeid(){
         var text = "";
@@ -124,23 +163,184 @@ $(function () {
 
     $('#create_project').click(function(){
         var name = window.prompt('请输入项目名称',"");
-        var pid = makeid();
+        if(name !== '' && name !== null)
+        {
+            var pid = makeid();
+            var project = {};
+            project.name = name;
+            project.sid = pid;
 
-        var project = {};
-        project.name = name;
-        project.sid = pid;
-
-        $.ajax({
-            url:'/lab/create',
-            type:"post",
-            data:project,
-            success:function(data){
-                //    alert(data);
-                location.href = '/lab/'+pid+'/edit';
-            }
-        })
+            $.ajax({
+                url:'/lab/create',
+                type:"post",
+                data:project,
+                success:function(data){
+                    location.href = '/lab/'+pid+'/edit';
+                }
+            })
+        }
 
     })
 
+    $('#add_resource,#upload_now').click(function(){
+        var input = $('<div class="inputbox"><input id="fileupload" type="file" name="files[]" multiple/></div>');
+        var LI = '<li><a class="rname" href="{0}">{1}</a><a class="rdelete">删除</a></li>';
+        $("body").append('<div class="overlay"></div>');
+        $("body").append(input);
 
+        var sid = location.pathname.split('/')[2];
+
+        if(!sid){
+            sid = $('.prj_selected').attr('id');
+        }
+
+        var url = '/lab/upload?sid='+sid;
+        input.fileupload({
+            url: url,
+            dataType: 'json',
+            done: function (e, data) {
+
+                if(data.result.status === 'success' && data.result.url) {
+                    var url = data.result.url;
+
+                    $('.overlay').remove();
+                    $('.inputbox').remove();
+                     $('.resources .tip').remove();
+                    var names = [];
+
+                    if(typeof(url) === 'object'){
+
+                        $('.resources li a').each(function(){
+                             names.push($(this).html());
+                        })
+
+                        url.forEach(function(doc){
+                            var name = doc.name.split('_')[1];
+                            var prefixname = name.split('.')[0];
+                            var type = name.split('.')[1];
+                            var index = 0;
+                            while(names.indexOf(name) != -1){
+                                name  = prefixname + index + '.' + type;
+                                index++;
+                            }
+                            names.push(name);
+
+                            $('.resources').append(LI.format(doc.url,name));
+                        })
+                    }
+                }
+                else
+                    alert('上传失败');
+            }
+        });
+    })
+
+    $('.resources li,.projects li').live('hover',function(e){
+        if(e.type == 'mouseenter'){
+            $('.rdelete',$(this)).show();
+            return false;
+        }else if(e.type == 'mouseleave'){
+            $('.rdelete',$(this)).hide();
+            return false;
+        }
+    })
+
+    $('.resources .rname').live('click', function(){
+        var from = editorHtml.getCursor();
+        editorHtml.replaceRange($(this).attr('href'),from);
+        return false;
+    })
+
+
+    $('.resources .rdelete').live('click', function(){
+        var self = this;
+        var ele = $(self).closest('li').find('a')[0];
+        var rs = $(ele).attr('href');
+        var sid = location.pathname.split('/')[2];
+
+        if(!sid){
+            sid = $('.prj_selected').attr('id');
+        }
+
+        $.ajax({
+            url:'/lab/resources/'+sid,
+            type:"delete",
+            data:{'url':rs},
+            success:function(data){
+                if(data.status === 'success'){
+                    $(self).closest('li').remove();
+                }
+
+            }
+        });
+    })
+
+
+    //ctrl+s
+
+    $(window).bind('keydown',function(e){
+        if(e.keyCode == 83 && e.ctrlKey){
+            e.preventDefault();
+            saveProject();
+        }
+    })
+
+    //helper
+    $('#helper').bind('click',function(){
+        alert('下个版本出。。。');
+    })
+
+    //setting
+    $('#setting').bind('click',function(){
+        alert('下个版本出。。。');
+    })
+
+    //handler toolbar
+
+    $('.explorer nav ul li ul li').not('.catelog').bind('click', function(){
+
+
+        var ls = $(this).attr('data-href');
+        if(ls){
+            ls = '<script src="' + ls +'"></script>';
+            var from = editorHtml.getCursor();
+            editorHtml.replaceRange(ls,from);
+        }
+
+        $(this).closest('ul').css('display','none');
+    })
+
+    //toolbar hover
+    $('.explorer nav ul li').live('hover',function(e){
+        if(e.type == 'mouseenter'){
+            $(this).find('ul').show();
+        }else if(e.type == 'mouseleave'){
+            $(this).find('ul').hide();
+        }
+    })
+
+    //delete project
+
+    $('.project .rdelete').live('click', function(){
+        var self = this;
+        var ele = $(self).closest('li').find('a')[0];
+        var rs = $(ele).attr('href');
+        var sid = location.pathname.split('/')[2];
+
+        if(!sid){
+            sid = $('.prj_selected').attr('id');
+        }
+
+        $.ajax({
+            url:'/lab/'+sid,
+            type:"delete",
+            data:{'url':rs},
+            success:function(data){
+                if(data.status === 'success'){
+                    location.href = '/lab';
+                }
+
+            }
+        });
+    })
 });

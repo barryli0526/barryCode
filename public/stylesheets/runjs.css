@@ -274,7 +274,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 }
 body, table, input, textarea, select
 {
-    font-family: 微软雅黑, Verdana, sans-serif, 宋体;
+    font-family: '微软雅黑', Verdana, sans-serif, '宋体';
 }
 body
 {
@@ -870,4 +870,55 @@ fieldset.right
 .NightTheme .toolItem .select ul li.lib_name
 {
     background-color: rgb(102, 102, 102);
+}
+
+/*file upload*/
+.NightTheme .overlay
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    filter: alpha(opacity =60);
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 10000;
+}
+
+.NightTheme .inputbox
+{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    height: 25.16em;
+    width: 52.42em;
+    margin: -12.58em 0 0 -26.21em;
+    overflow: hidden;
+    z-index: 10001;
+    color: #fff;
+    text-align: center;
+    background-color:white;
+    font-size: 12px;
+}
+
+.NightTheme #fileupload
+{
+    position:absolute;
+    left:43%;
+    top:50%;
+}
+
+.NightTheme .rdelete
+{
+    display:none;
+    float:right;
+    font-size:12px;
+    font-family:'微软雅黑';
+    color:gray;
+    cursor:pointer;
+}
+.NightTheme .rdelete:hover
+{
+    color:white;
 }

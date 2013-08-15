@@ -21,14 +21,8 @@
             empty = "";
         return this.replace(reg, empty);
     };
-    String.prototype.format = function (o)
-    {
-        return this.replace(/{([^{}]*)}/g,
-            function (a, b)
-            {
-                var r = o[b];
-                return typeof r === 'string' || typeof r === 'number' ? r : a;
-            }
-        );
-    };
+    String.prototype.format = function () {
+        var args = arguments;
+        return this.replace(/\{(\d+)\}/g, function (m, i) { return args[i]; });
+    }
 })();

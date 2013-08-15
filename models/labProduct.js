@@ -11,6 +11,7 @@ var LabProductSchema = new Schema({
     css:{type:String},
     js:{type:String},
     demoUrl:{type:String},
+    resources:{type:Array},
 
     tags:{type: Array},
 

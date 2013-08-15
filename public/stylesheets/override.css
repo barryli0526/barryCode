@@ -10,4 +10,10 @@
 .CodeMirror
 {
     height: 100%;
+    font-size:12px;
+}
+
+.cm-s-ambiance .CodeMirror-linenumber
+{
+    color:white;
 }

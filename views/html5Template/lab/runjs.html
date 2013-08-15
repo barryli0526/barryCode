@@ -18,7 +18,14 @@
 
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript"></script>
     <link href="/stylesheets/runjs.css" rel="stylesheet" type="text/css" />
+    <script src="/javascript/dev/common.js"></script>
     <script src="/javascript/runjs.js" type="text/javascript"></script>
+
+    <script src="/javascript/vendor/jquery.ui.widget.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="/javascript/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="/javascript/jquery.fileupload.js"></script>
 
 </head>
 <body class="NightTheme">
@@ -55,15 +62,15 @@
         </div>
         <div class="btnGroup menuItem">
             <div class="btn" id="save">
-                更新(<span style="text-decoration: underline;">S</span>)
+                保存(<span style="text-decoration: underline;">S</span>)
             </div>
             <div class="btn publish" style="border-left-color: currentColor; border-left-width: 0px;
                         border-left-style: none;">
                 发布
             </div>
-            <div class="btn share" id="share" style="border-right-color: currentColor; border-left-color: currentColor;
+            <div class="btn share" id="preview" style="border-right-color: currentColor; border-left-color: currentColor;
                         border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;">
-                分享
+                 预览
             </div>
             <div class="btn" id="fork" onclick="runjs.checkProxy('fork');">
                 Fork
@@ -97,15 +104,21 @@
             </div>
         </div>
         <ul class="projects">
-            <li class="project prj_selected" id="code_36429">
-                <%if(typeof content !== 'undefined'){%>
+            <%if(typeof categories !== 'undefined'){
+                categories.forEach(function(category,i){
+                    var className = '';
+                    if(typeof content !== 'undefined' && content.sid === category.sid)
+                        className = 'prj_selected';
+                    else if(typeof content === 'undefined' && i ===0)
+                        className = 'prj_selected';
+            %>
+            <li class="project <%=className%>" id="<%=category.sid%>">
                 <div class="title">
-                    <a title="test" class="title_name" href="javascript:runjs.loadCode('6ilwbnov');"><%=content.name%></a>
-                    <a title="代码管理" class="rename" id="code_menu_6ilwbnov" href="javascript:runjs.explorer.showCodeMenu($('#code_menu_6ilwbnov'),'6ilwbnov',35900);">
+                    <a title="test" class="title_name" href="/lab/<%=category.sid%>/edit"><%=category.name%></a>
                     </a>
                 </div>
-                <%}%>
             </li>
+            <%})}%>
         </ul>
     </div>
     <div class="mainresource">
@@ -115,15 +128,33 @@
             </div>
         </div>
         <ul class="resources projects">
+            <%if((typeof content === 'undefined') || (typeof content.resources === 'undefined') || (content.resources.length) ===0){%>
             <li class="tip">
                 <p style="color: #aaa;">
-                    还没有上传任何资源
+                还没有上传任何资源
                 </p>
                 <br />
                 <p>
-                    <a id="upload_now" href="">马上上传</a>
+                    <a id="upload_now" href="javascript:return false;">马上上传</a>
                 </p>
             </li>
+            <%}else{
+                var names = [];
+                content.resources.forEach(function(rs, i){
+                    var token = rs.split('/');
+                    token = token[token.length-1].split('_');
+                    var name = token[token.length-1];
+                    var prefixname = name.split('.')[0];
+                    var type = name.split('.')[1];
+                    var index = 0;
+                    while(names.indexOf(name) != -1){
+                        name  = prefixname + index + '.' + type;
+                        index++;
+                    }
+                    names.push(name);
+            %>
+            <li><a class="rname" href="<%=rs%>"><%=name%></a><a class="rdelete">删除</a></li>
+            <%});}%>
         </ul>
     </div>
 </div>
@@ -328,7 +359,7 @@
             </div>
             <div class="handler handler_horizontal" style="top: 402px;">
             </div>
-            <div id="result" class="editor preview bottom">
+            <div id="code_pre" class="editor preview bottom">
                         <span class="quick_tools" style="display: none;"><span><a href="http://sandbox.runjs.cn/show/6ilwbnov"
                                                                                   target="_blank">预览</a> </span>
                             <img width="14" src="/img/arrow-out.png" />

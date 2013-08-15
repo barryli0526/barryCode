@@ -42,6 +42,7 @@
         //            $("#if1").contents().find('html').html(html);
     }
 
+    //get content from codemirror textbox
     function getContent()
     {
         var obj = {};
@@ -51,6 +52,7 @@
         return obj;
     }
 
+    //combine html+css+js
     function getCombinedHtml(obj)
     {
         var js = obj.js, css = obj.css;
@@ -65,14 +67,11 @@
             temp = body.length == 2 && body[1] ? body[1] : ""
         }
 
-        //  css = editorCss.getValue();
-
-        //  js = editorJs.getValue();
-
         return html + "<script id='pending_script'>try{\n" + js + "\n}catch(e){\n}<\/script>" + "<style id='pending_style'>" + css + "</style>" + temp;
 
     }
 
+    //publish the product
     $(".publish").click(function ()
     {
         var data = getContent();

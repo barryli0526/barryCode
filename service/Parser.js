@@ -1,7 +1,8 @@
 var jsdom   = require('jsdom'),
     et = require('elementtree'),
     cheerio = require('cheerio'),
-    request = require('request');
+    request = require('request'),
+    fs = require('fs');
 
 
 exports.ParseRequest = function(option, callback){
@@ -114,5 +115,18 @@ function rssParser(data, opt, callback){
         arr[i] = obj;
     })
     return callback(null ,arr);
+}
+
+exports.xmlParser = function(filepath, callback){
+    fs.readFile(filepath, 'utf-8', function(err, data){
+      //  console.log(data);
+         if(err){
+             console.log(err);
+             return callback(err);
+         }
+        var doc = et.parse(data);
+      //  console.log(doc);
+        return callback(err, doc);
+    })
 }
 

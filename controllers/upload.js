@@ -21,6 +21,7 @@ exports.uploadImage = function(req, res, next){
     var userDir = path.join(config.upload_dir, uid);
     ndir.mkdir(userDir, function (err) {
         if (err) {
+            console.log(err);
             return next(err);
         }
 

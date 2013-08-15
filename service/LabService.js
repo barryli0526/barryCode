@@ -30,3 +30,27 @@ exports.updateProduct = function(sid, data, callback){
     labProduct.updateProduct(sid, data, callback);
 }
 
+exports.removeProductBySid = function(sid, callback){
+    labProduct.removeProductBySid(sid, callback);
+}
+
+exports.getProductsByAuthorId = function(authorid, callback){
+    if(typeof(authorid) === "string"){
+        authorid =  new ObjectId(authorid);
+    }
+
+    labProduct.getProductsByAuthorId(authorid, callback);
+}
+
+exports.addResourcesBySid = function(sid,resources, callback){
+    if(typeof resources === 'string')
+        resources = resources.split(';');
+    labProduct.AddResources(sid, {'resources':resources}, callback);
+}
+
+exports.removeResourcesBySid = function(sid, resources, callback){
+    if(typeof resources === 'string')
+        resources = resources.split(';');
+    labProduct.removeResources(sid, {'resources':resources}, callback);
+}
+

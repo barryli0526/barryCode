@@ -109,10 +109,16 @@ module.exports = function (app, client) {
   }) */
 
   //lab
+
   app.get('/lab',lab.index);
   app.get('/lab/:pageid', lab.showPage);
   app.post('/lab/save',lab.save);
+
   app.get('/lab/:pageid/edit', lab.edit);
   app.post('/lab/create', lab.create);
+  app.post('/lab/upload', lab.uploadStaticFiles);
+  app.put('/lab/:sid', lab.update);
+  app.delete('/lab/resources/:sid', lab.removeResources);
+  app.delete('/lab/:sid', lab.removeProject);
 
 };
