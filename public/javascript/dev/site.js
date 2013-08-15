@@ -83,8 +83,9 @@ function createSVG()
         SERIOUSBALLOONS  = {
             "about-us"       : new rMotion(paper),
             "Blog"           : new rMotion(paper),
-            "news" : new rMotion(paper),
-            "chat"      : new rMotion(paper),
+            "news"           : new rMotion(paper),
+            "chat"           : new rMotion(paper),
+            "runjs"          : new rMotion(paper),
             odd1             : new rMotion(paper),
             odd2             : new rMotion(paper),
             odd3             : new rMotion(paper),
@@ -101,10 +102,11 @@ function createSVG()
     SERIOUSBALLOONS.odd4.createCircle(offsetWidth + 500, 480, 50, 150, 10000, "rgba(0, 0, 0, 0.15)", "", "", "", offsetWidth + 480, 640);
     SERIOUSBALLOONS.odd5.createCircle(offsetWidth + 735, 385, 65, 150, 10000, "rgba(0, 0, 0, 0.15)", "", "", "", offsetWidth + 595, 650);
 
-    SERIOUSBALLOONS["about-us"].createCircle(offsetWidth + 240, 470, 88, 100, 5000, "#e95325", "ABOUT US", "assets/about.jpg", "/workspace/img/pacman/pacman-orange.gif", offsetWidth + 345, 635);
-    SERIOUSBALLOONS["Blog"].createCircle(offsetWidth + 375, 275, 115, 100, 6000, "#1b8abe", "Blog", "assets/blog.jpg", "/workspace/img/pacman/pacman-blue.gif", offsetWidth + 425, 635);
-    SERIOUSBALLOONS["news"].createCircle(offsetWidth + 595, 345, 95, 100, 5500, "#ef5fa3", "NEWS", "assets/read.jpg", "/workspace/img/pacman/pacman-pink.gif", offsetWidth + 480, 640);
-    SERIOUSBALLOONS["chat"].createCircle(offsetWidth + 720, 510, 80, 100, 5000, "#4ba93c", "Chat", "assets/chat.jpg", "/workspace/img/pacman/pacman-green.gif", offsetWidth + 595, 650);
+    SERIOUSBALLOONS["about-us"].createCircle(offsetWidth + 240, 470, 88, 100, 5000, "#e95325", "ABOUT US", "assets/about.jpg", "assets/about.jpg", offsetWidth + 345, 635);
+    SERIOUSBALLOONS["Blog"].createCircle(offsetWidth + 375, 275, 115, 100, 6000, "#1b8abe", "Blog", "assets/blog.jpg", "assets/blog.jpg", offsetWidth + 425, 635);
+    SERIOUSBALLOONS["news"].createCircle(offsetWidth + 595, 345, 95, 100, 5500, "#ef5fa3", "NEWS", "assets/read.jpg", "assets/read.jpg", offsetWidth + 480, 640);
+    SERIOUSBALLOONS["chat"].createCircle(offsetWidth + 720, 510, 80, 100, 5000, "#4ba93c", "Chat", "assets/chat.jpg", "assets/chat.jpg", offsetWidth + 595, 650);
+    SERIOUSBALLOONS["runjs"].createCircle(offsetWidth + 480, 460, 80, 100, 5000, "#161a1b", "RunJS", "assets/runjs.png", "assets/runjs.png", offsetWidth + 480, 640);
 
     seriousLogo = paper.image("assets/mainLogo.png", offsetWidth + 310, 630, 300, 52);
 
@@ -127,5 +129,8 @@ function createSVG()
         //    SERIOUS.navigation.loadPage( "/reach-out/", "reach-out");
         //    history.pushState({ url: "/reach-out/", pagename: "reach-out" }, "reach out", "/reach-out/");
         location.href = '/chat';
+    });
+    SERIOUSBALLOONS["runjs"].click(function() {
+        location.href = '/lab';
     });
 }
