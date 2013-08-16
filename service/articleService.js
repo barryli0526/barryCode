@@ -126,8 +126,9 @@ exports.UpdateArticle = function(articleid, data, callback){
     }
 
     data.categories = null;
-    var removed = util.transToArray(data.category_removed);
-    var added = util.transToArray(data.category_added);
+    var removed = util.transtoObjectArray(data.category_removed);
+    var added = util.transtoObjectArray(data.category_added);
+
     data.category_removed = null;
     data.category_added = null;
 
@@ -135,8 +136,6 @@ exports.UpdateArticle = function(articleid, data, callback){
         data.tags = data.tags.split(',');
     }
 
-  //  var categories = data.categories;
-  //  data.categories = null;
 
     Article.updateArticle(articleid, data, function(err, article){
         if(err || !article){
@@ -153,6 +152,7 @@ exports.UpdateArticle = function(articleid, data, callback){
             removed.forEach(function(removedId){
                 if(typeof(removedId) === 'string')
                     removedId = new ObjectId(removedId);
+                console.log(removedId);
                  CategoryInfo.deleteArticleCount(removedId,function(err){
                      if(err)
                         return callback(err);
@@ -163,6 +163,8 @@ exports.UpdateArticle = function(articleid, data, callback){
             added.forEach(function(addId){
                 if(typeof(addId) === 'string')
                     addId = new ObjectId(addId);
+
+                console.log(addId);
                 CategoryRelation.newAndSave(articleid,addId);
                 CategoryInfo.addArticleCount(addId);
             })

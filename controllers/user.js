@@ -9,9 +9,13 @@ function gen_session(user, res){
 
 
 exports.showSignIn = function(req, res){
-     res.render('sign/signin.html',{
+    if(req.session.user){
+      return res.redirect('/admin');
+    }else{
+      res.render('sign/signin.html',{
          layout:null
      })
+    }
 }
 
 exports.signOut = function(req, res){
@@ -23,8 +27,10 @@ exports.signOut = function(req, res){
 exports.signIn = function(req, res, next){
     var username = req.body.username;
     var password = req.body.password;
-
-    var referUrl = req.header('Referer');
+   // console.log(req.header);
+   // var referUrl = req.header('Referer');
+    console.log(req.session.refererUrl);
+    var referUrl = req.session.refererUrl;
     if(!referUrl)
       referUrl = '/admin';
 
@@ -55,12 +61,12 @@ exports.signIn = function(req, res, next){
 
 exports.signUp = function(req, res, next){
 	var data = req.body;
-        var referUrl = req.header('Refer');
+        var referUrl = req.header('Referer');
         if(!referUrl)
-          referUrl = '/admin';
-   // console.log(data);
+          referUrl = '/';
+
 	UserService.SignUp(data, function(err, user){
-    //    console.log(err);
+
 		if(err || !user){
 			return next(err || "出错")
 		}
@@ -70,7 +76,6 @@ exports.signUp = function(req, res, next){
 	});
 }
 
-
 exports.auth_user = function(req, res, next){
     if(req.session.user){
         res.local('current_user', req.session.user);
@@ -78,10 +83,7 @@ exports.auth_user = function(req, res, next){
     }else{
         var cookie = req.cookies[config.auth_cookie_name];
         if(!cookie){
-           // return next();
-           // console.log(req);
             return next();
-            //return res.redirect('/login');
         }
 
         var auth_token = utils.decrypt(cookie, config.session_secret);

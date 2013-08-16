@@ -62,12 +62,12 @@ exports.index = function(req, res, next){
 exports.save =  function(req, res, next){
 
     if(!req.session.user){
+        req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/lab';
         return res.render('sign/signin',{layout:null});
     }
 
     var data = req.body;
-   // console.log(data);
-   // res.end('success')
+
 
     var uname = req.session.user.loginname.toString();
     var userDir = path.join(config.lab_content_idr, uname,data.id);
@@ -78,7 +78,7 @@ exports.save =  function(req, res, next){
             return next(err);
         }
 
-      //  var filename = data.id+'.html';
+
         var savepath = path.resolve(path.join(userDir, 'index.html'));
         if (savepath.indexOf(path.resolve(userDir)) !== 0) {
             return res.send({status: 'forbidden'});
@@ -111,6 +111,7 @@ exports.save =  function(req, res, next){
 exports.update = function(req, res,next){
 
     if(!req.session.user){
+        req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/lab';
         return res.render('sign/signin',{layout:null});
     }
 
@@ -134,6 +135,7 @@ exports.update = function(req, res,next){
 
 exports.uploadStaticFiles = function(req, res, next){
     if(!req.session.user){
+        req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/lab';
         return res.render('sign/signin',{layout:null});
     }
 
@@ -208,6 +210,7 @@ exports.uploadStaticFiles = function(req, res, next){
 
 exports.removeProject = function(req, res){
     if(!req.session.user){
+        req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/lab';
         return res.render('sign/signin',{layout:null});
     }
 
@@ -232,6 +235,7 @@ exports.removeProject = function(req, res){
 exports.removeResources = function(req, res, next){
 
     if(!req.session.user){
+        req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/lab';
         return res.render('sign/signin',{layout:null});
     }
 
@@ -259,6 +263,7 @@ exports.removeResources = function(req, res, next){
 exports.showPage = function(req, res){
 
    if(!req.session.user){
+       req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/lab';
        return res.render('sign/signin',{layout:null});
    }
 
@@ -305,6 +310,7 @@ exports.showPage = function(req, res){
 exports.edit = function(req, res, next){
 
     if(!req.session.user){
+        req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/lab';
         return res.render('sign/signin',{layout:null});
     }
 
@@ -336,6 +342,7 @@ exports.edit = function(req, res, next){
 exports.create = function(req, res){
 
     if(!req.session.user){
+        req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/lab';
         return res.render('sign/signin',{layout:null});
     }
 

@@ -121,7 +121,6 @@ exports.showUpdte = function(req, res, next){
 
     var articleid = req.params.articleid;
 
-
     var user =  req.session.user;
     var proxy = new EventProxy();
     var events = ['category','article'];
@@ -137,7 +136,6 @@ exports.showUpdte = function(req, res, next){
     CategoryService.getCategoryByAuthorid(user._id,function(err, category){
         proxy.emit("category",category);
     });
-
 
     ArticleService.getDetailsofArticle(articleid, function(err, article){
       if(err){
@@ -163,7 +161,6 @@ exports.Update = function(req, res, next){
 
     var article = req.body;
 
- //   console.log(article);
 
     article.top = article.top ? true : false;
     article.enable_comment = article.enable_comment ? true : false;

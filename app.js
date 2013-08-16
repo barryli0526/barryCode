@@ -10,6 +10,7 @@ var routes = require('./routes');
 var socket = require('./sockets');
 var redis = require('redis');
 var lab = require('./controllers/lab');
+var fs = require('fs');
 //var ejsfilter = require('./lib/ejs_filter');
 
 /**
@@ -54,6 +55,7 @@ app.configure(function () {
 
   app.use('/admin/',function(req, res, next){
       if(!req.session.user){
+          req.session.refererUrl = req.header('Referer') ? req.header('Referer') : '/admin';
           return res.redirect('/signin');
       }else{
           return next();
@@ -86,4 +88,7 @@ module.exports = app;
 
 process.on('uncaughtException', function(err){
     console.log('Exception: ' + err.stack);
+    fs.appendFile(path.resolve('log.txt'),err.stack,function(err){
+
+    })
 });

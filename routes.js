@@ -21,6 +21,7 @@ var config = require('./config/base').config;
 module.exports = function (app, client) {
   // home page
   app.get('/', function(req, res){
+
       res.render('index');
   })
 
