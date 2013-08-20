@@ -1,0 +1,371 @@
+/* ------------------header------------------ */
+/*#region header*/
+header
+{
+    background: #28353c url(http://runjs.cn/img/bg-black.gif) repeat-x;
+    zoom: 1;
+    height: 3.2rem;
+    font-size: 130%;
+    padding: 1rem 0;
+}
+
+.logo
+{
+    position: absolute;
+    width: 10%;
+    background: url(http://runjs.cn/img/logo.png) no-repeat;
+    margin-left: 0.8rem;
+    min-width: 82px;
+}
+
+.logo a *
+{
+    visibility: hidden;
+}
+
+header ul,
+header ul li,
+header dl,
+header dl dt,
+header dl dd
+{
+    float: right;
+}
+
+header dl dd,
+header dl dt
+{
+    padding: 0.768rem 0.51rem;
+}
+
+header ul li
+{
+    padding: 0.768rem 2.56rem;
+    border: 1px solid rgb(22, 16, 24);
+}
+
+header dl
+{
+    margin: 0 15% 0 9%;
+}
+/*#endregion*/
+/* ------------------artichure------------------*/
+/*#region artichure*/
+.main
+{
+    position: absolute;
+    bottom: 0;
+    top: 5.2rem;
+    width: 100%;
+/*    overflow: hidden;*/
+}
+
+.nosignin .treeview,
+.nosignin .lrhandler
+{
+    display: none;
+}
+
+.nosignin .explorer
+{
+    left: 0;
+    width: 100%;
+}
+
+.treeview
+{
+    position: absolute;
+    height: calc(100% - 1.6rem);
+    width: calc(25% - 1.28rem);
+    background: #f5bf0f;
+    padding: 0.8rem 0.48rem;
+    background: #333B3D;
+}
+
+.explorer
+{
+    position: absolute;
+    background: #343E40;
+    padding: 0.8rem;
+    z-index: 10;
+    left: calc(25% + 5px + 0.96rem);
+    height: calc(100% - 1.6rem);
+    width: calc(75% - 5px - 2.56rem);
+}
+
+.horizontal
+{
+    background: #2C3437 url(http://runjs.cn/img/handle-h-b.png) 50% 50% no-repeat;
+    cursor: row-resize;
+    width: 100%;
+    height: 0.8rem;
+    box-shadow: #1D2224 2px 0;
+}
+
+.vertical
+{
+    background: #2C3437 url(http://runjs.cn/img/handle-v-b.png) 50% 50% no-repeat;
+    cursor: col-resize;
+    height: 100%;
+    width: 0.8rem;
+    position: absolute;
+}
+
+.lrhandler
+{
+    left: calc(25% + 0.96rem - 1.28rem);
+    width: 1.92rem;
+}
+
+/*#endregion*/
+/* ------------------navigator------------------*/
+/*#region navbar*/
+nav
+{
+    font-size: 144%;
+    padding: 0 0.48rem;
+    zoom: 1;
+    overflow: auto;
+}
+
+nav > ul,
+nav > ul > li
+{
+    margin: 0;
+    float: left;
+}
+
+nav > ul > li a,
+nav .view
+{
+    display: block;
+    border: 1px solid rgb(28, 36, 38);
+    padding: 0.48rem;
+    background: rgb(52, 62, 64);
+}
+
+nav li ul
+{
+    font-size: 1.28rem;
+    display: none;
+    background: rgb(52, 62, 64);
+    border: 1px solid #333;
+    position: absolute;
+    z-index: 100;
+}
+
+nav li li
+{
+    padding: 0.48rem;
+    cursor: pointer;
+}
+
+nav li li:hover
+{
+    background: rgb(102, 102, 102);
+}
+
+nav li:hover ul
+{
+    display: block;
+}
+
+.arrow
+{
+    display: inline-block;
+    width: 0.48rem;
+    border-width: 6px 6px 0 0;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.catelog
+{
+    background: rgb(102, 102, 102);
+}
+
+/*#endregion navbar*/
+/*------------------codearea------------------*/
+/*#region codearea*/
+.code
+{
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+.fset
+{
+    position: relative;
+    margin: 0.32rem;
+    height: calc(49% - 1.28rem);
+    padding: 0.32rem;
+}
+
+section
+{
+    height: 100%;
+    float: left;
+    width: calc(50% - 0.8rem);
+}
+
+section div:hover .label
+{
+    display: block;
+}
+
+textarea
+{
+    height: 94%;
+    width: 99%;
+    border: none;
+    font-size: 14px;
+}
+
+.label
+{
+    position: absolute;
+    z-index: 50;
+    opacity: 0.8;
+    background: rgba(230, 230, 230, 0.5);
+    height: 2.4rem;
+    padding: 0 0.96rem;
+    line-height: 2.4rem;
+    top: 0.8rem;
+    right: 2.4rem;
+    color: #bbb;
+    border-radius: 0.4rem;
+    display: none;
+}
+
+.label:hover
+{
+    opacity: 1;
+    color: #fff;
+}
+
+.label img
+{
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.codecenter
+{
+    left: calc(50% - 0.8rem);
+}
+
+/*#endregion*/
+/* ------------------treeview------------------ */
+.treeview ul
+{
+    width: 100%;
+}
+
+.treeview >ul> li
+{
+    border-top: 2px solid #263339;
+    width: 100%;
+}
+
+.treeview h1
+{
+    cursor: pointer;
+}
+
+.treeview .add_project
+{
+    background:url('../../assets/runjs_icon-black.gif') no-repeat;
+    background-position: 5px -88px;
+    width:22px;
+    height: 22px;
+    display:block;
+    float:right;
+}
+
+.treeview .projects,
+.treeview .resources
+{
+    clear: both;
+    font-size: 160%;
+}
+
+.treeview a.title_name
+{
+    display:block;
+}
+
+.treeview .prj_selected a.title_name
+{
+    color:#f5bf0f;
+}
+
+.treeview li
+{
+    border: none;
+    padding: 0.4rem 0.2rem;
+}
+
+.treeview ul li > div
+{
+    clear: both;
+}
+
+.treeview div ul,
+.treeview div li
+{
+    border: none;
+}
+
+.tip p
+{
+    color: #aaa;
+}
+
+.fulllay
+{
+    position: absolute;
+    width: calc(100% - 4*0.32rem);
+    height: calc(100% - 4*0.32rem);
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+
+/*file upload*/
+ .overlay
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    filter: alpha(opacity =60);
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 10000;
+}
+
+ .inputbox
+{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    height: 25.16em;
+    width: 52.42em;
+    margin: -12.58em 0 0 -26.21em;
+    overflow: hidden;
+    z-index: 10001;
+    color: #fff;
+    text-align: center;
+    background-color:white;
+    font-size: 12px;
+}
+
+ #fileupload
+{
+    position:absolute;
+    left:43%;
+    top:50%;
+}

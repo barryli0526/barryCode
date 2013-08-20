@@ -72,6 +72,12 @@ routes(app, client);
 
 socket(app, client);
 
+var env = process.argv[2] || process.env.NODE_ENV || 'dev';
+//console.log(env);
+
+require('./build')(env);
+
+
 //if (process.env.NODE_ENV !== 'test') {
   app.listen(config.port);
 

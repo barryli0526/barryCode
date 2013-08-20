@@ -1,0 +1,82 @@
+﻿/*#region right-click menu*/
+.content_menu
+{
+    color: #fff;
+    font: 15px Arial,'微软雅黑',Verdana,sans-serif,'宋体';
+    position: absolute;
+    /*display: none;*/
+    z-index: 10000;
+    border: 1px solid #333337;
+    background: #1b1b1c;
+    /*box-shadow: 1px 1px 3px #191919;*/
+    visibility: hidden;
+}
+
+.content_menu ul
+{
+    margin: 0;
+    padding: 0;
+    box-shadow: 1px 1px 3px #191919;
+}
+
+.content_menu li
+{
+    background: #3D4548;
+    list-style-type: none;
+    /*width: 120px;*/
+    position: relative;
+}
+
+.content_menu li a:link,
+.content_menu li a:visited,
+.content_menu li a:active
+{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.content_menu li a:hover
+{
+    color: #f5bf0f;
+}
+
+.content_menu li:hover > ul
+{
+    display: block;
+}
+
+.content_menu .sepline
+{
+    height: 1px;
+    background: #fff;
+    padding: 0;
+}
+
+.content_menu .child
+{
+    /*display: none;*/
+    position: absolute;
+    /*left: 120px;*/
+    top: 0;
+}
+
+/*with image*/
+.content_menu.withimg li
+{
+    /*width: 150px;*/
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+}
+
+.content_menu.withimg li a
+{
+    padding-left: 40px;
+}
+
+.content_menu.withimg .child
+{
+    /*left: 150px;*/
+}
+/*#endregion*/

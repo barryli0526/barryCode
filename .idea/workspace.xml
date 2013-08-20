@@ -2,33 +2,114 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2263c5b-ff48-40e8-b4cc-02932417bef7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/arrow-out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/dev/article.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/lib/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/contextmenu/contextmenu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/contextmenu/contextmenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/cssmerge.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/dev/feed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/lib/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/dev/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/prod/jsmerge.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/dev/labservice.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/dev/menu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/lib/require.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/dev/utility.js" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\javascript\dev\run.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\javascript\runjs.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\chosen.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\markdown.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\override.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\reset.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\runjs.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\runjs1.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\style.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\theme.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\uniform.default.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\front-end\front-end\barryCode\public\user_data\lab\barry\V3QZR\index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/articles.js" afterPath="$PROJECT_DIR$/controllers/articles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/article/comment.html" afterPath="$PROJECT_DIR$/views/html5Template/article/comment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/article/detail.html" afterPath="$PROJECT_DIR$/views/html5Template/article/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/category/detail.html" afterPath="$PROJECT_DIR$/views/html5Template/category/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/tag/detail.html" afterPath="$PROJECT_DIR$/views/html5Template/tag/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/user_data/lab/barry/BXDC9/index.html" afterPath="$PROJECT_DIR$/public/user_data/lab/barry/BXDC9/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/index.html" afterPath="$PROJECT_DIR$/views/html5Template/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/article/index.html" afterPath="$PROJECT_DIR$/views/html5Template/article/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/chatroom/index.html" afterPath="$PROJECT_DIR$/views/html5Template/chatroom/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/feeds/index.html" afterPath="$PROJECT_DIR$/views/html5Template/feeds/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/layout.html" afterPath="$PROJECT_DIR$/views/html5Template/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/admin/layout.html" afterPath="$PROJECT_DIR$/views/html5Template/admin/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/lab/runjs1.html" afterPath="$PROJECT_DIR$/views/html5Template/lab/runjs1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/html5Template/sign/signin.html" afterPath="$PROJECT_DIR$/views/html5Template/sign/signin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascript/dev/site.js" afterPath="$PROJECT_DIR$/public/javascript/dev/site.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascript/dev/view.js" afterPath="$PROJECT_DIR$/public/javascript/dev/view.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\javascript\jquery.fileupload.js" afterPath="$PROJECT_DIR$/public/javascript/lib/jquery.fileupload.js" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\javascript\jquery.iframe-transport.js" afterPath="$PROJECT_DIR$/public/javascript/lib/jquery.iframe-transport.js" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\javascript\main.js" afterPath="$PROJECT_DIR$/public/javascript/dev/main.js" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\javascript\tag.js" afterPath="$PROJECT_DIR$/public/javascript/dev/tag.js" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/lib/bootstrap-responsive.min.css" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\chat.css" afterPath="$PROJECT_DIR$/public/stylesheets/dev/chat.css" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\font-awesome-ie7.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/lib/font-awesome-ie7.min.css" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\images\dotsH.gif" afterPath="$PROJECT_DIR$/public/assets/dotsH.gif" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\images\icon_down.png" afterPath="$PROJECT_DIR$/public/assets/icon_down.png" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\images\icon_folder.gif" afterPath="$PROJECT_DIR$/public/assets/icon_folder.gif" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\images\icon_reply.png" afterPath="$PROJECT_DIR$/public/assets/icon_reply.png" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\images\icon_up.png" afterPath="$PROJECT_DIR$/public/assets/icon_up.png" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\images\icon_voice.gif" afterPath="$PROJECT_DIR$/public/assets/icon_voice.gif" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\jquery.tagsinput.css" afterPath="$PROJECT_DIR$/public/stylesheets/lib/jquery.tagsinput.css" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\login\login.css" afterPath="$PROJECT_DIR$/public/stylesheets/dev/login.css" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\main.css" afterPath="$PROJECT_DIR$/public/stylesheets/dev/main.css" />
+      <change type="MOVED" beforePath="E:\front-end\front-end\barryCode\public\stylesheets\theme\html5_article.css" afterPath="$PROJECT_DIR$/public/stylesheets/dev/html5_article.css" />
     </list>
     <ignored path="barryCode.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376447847273" ignored="false" />
+    <file path="/Dummy.txt" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376983394830" ignored="false" />
     <file path="/routes.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376556703504" ignored="false" />
     <file path="/site.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376558091149" ignored="false" />
-    <file path="/app.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376643569626" ignored="false" />
+    <file path="/app.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376978492381" ignored="false" />
     <file path="/runjs.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376550831287" ignored="false" />
-    <file path="/runjs1.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376555887873" ignored="false" />
+    <file path="/runjs1.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376989150997" ignored="false" />
     <file path="/LabService.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376556876159" ignored="false" />
     <file path="/labProduct.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376556849185" ignored="false" />
     <file path="/get.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376544049444" ignored="false" />
     <file path="/lab.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376557429687" ignored="false" />
-    <file path="/runjs.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376557753861" ignored="false" />
+    <file path="/runjs.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376906921420" ignored="false" />
     <file path="/upload.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376374377394" ignored="false" />
     <file path="/runjs.css" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376465874076" ignored="false" />
-    <file path="/runjs1.css" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376556604585" ignored="false" />
+    <file path="/runjs1.css" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376991621493" ignored="false" />
     <file path="/library.xml" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376541275515" ignored="false" />
     <file path="/Parser.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376544069931" ignored="false" />
     <file path="/toolbar.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376555846606" ignored="false" />
     <file path="/override.css" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376550002285" ignored="false" />
     <file path="/util.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376622560117" ignored="false" />
-    <file path="/layout.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376560403567" ignored="false" />
+    <file path="/layout.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376988192534" ignored="false" />
     <file path="/user.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376620016150" ignored="false" />
     <file path="/articleService.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376622041120" ignored="false" />
+    <file path="/index.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376887642304" ignored="false" />
+    <file path="/index.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376985169551" ignored="false" />
+    <file path="/detail.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376981705214" ignored="false" />
+    <file path="/menu.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376981483622" ignored="false" />
+    <file path="/utility.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376894634563" ignored="false" />
+    <file path="/contextmenu.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376964090489" ignored="false" />
+    <file path="/labservice.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376983786571" ignored="false" />
+    <file path="/package.json" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376985918621" ignored="false" />
+    <file path="/build.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376985803451" ignored="false" />
+    <file path="/jsmerge.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376982149223" ignored="false" />
+    <file path="/comment.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376986305010" ignored="false" />
+    <file path="/a.dummy" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376984515694" ignored="false" />
+    <file path="/main.css" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376984581890" ignored="false" />
+    <file path="/cssmerge.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376985482679" ignored="false" />
+    <file path="/signin.html" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376985464434" ignored="false" />
+    <file path="/login.css" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376986645841" ignored="false" />
+    <file path="/view.js" changelist="f2263c5b-ff48-40e8-b4cc-02932417bef7" time="1376991589227" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,117 +129,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="article.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/admin/article.js">
+      <file leaf-file-name="runjs1.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/dev/runjs1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="0" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#317#828#0" expanded="false" />
-                <element signature="e#872#1433#0" expanded="false" />
-                <element signature="e#1476#1808#0" expanded="false" />
-                <element signature="e#1854#2210#0" expanded="false" />
-                <element signature="e#2255#3173#0" expanded="false" />
-                <element signature="e#3219#4122#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articleService.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/articleService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="0" selection-start="3715" selection-end="3715" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#601#1774#0" expanded="false" />
-                <element signature="e#5074#5622#0" expanded="false" />
-                <element signature="e#5802#7182#0" expanded="false" />
-                <element signature="e#7324#7508#0" expanded="false" />
-                <element signature="e#7650#8177#0" expanded="false" />
-                <element signature="e#8242#8439#0" expanded="false" />
-                <element signature="e#8485#9382#0" expanded="false" />
-                <element signature="e#9503#9921#0" expanded="false" />
-                <element signature="e#10007#10320#0" expanded="false" />
-                <element signature="e#10369#10414#0" expanded="false" />
-                <element signature="e#10670#10851#0" expanded="false" />
-                <element signature="e#10906#11042#0" expanded="false" />
-                <element signature="e#11114#12465#0" expanded="false" />
-                <element signature="e#12540#13145#0" expanded="false" />
-                <element signature="e#13204#13240#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="combo" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/combo">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="56" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
+            <state line="209" column="1" selection-start="3138" selection-end="3138" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/html5Template/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="12" selection-start="2128" selection-end="2128" vertical-scroll-proportion="0.69678956">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="util.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/util.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="30" selection-start="3145" selection-end="3145" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="categoryRelation.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbHelper/categoryRelation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="78" selection-start="1817" selection-end="1827" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding>
-                <element signature="e#313#1153#0" expanded="false" />
-                <element signature="e#1214#1281#0" expanded="false" />
-                <element signature="e#1346#1574#0" expanded="false" />
-                <element signature="e#1907#2090#0" expanded="false" />
-                <element signature="e#2253#2522#0" expanded="false" />
-                <element signature="e#2653#2904#0" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryService.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/CategoryService.js">
+      <file leaf-file-name="build.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="62" column="34" selection-start="1169" selection-end="1181" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascript/dev/view.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="61" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1148#1803#0" expanded="false" />
-                <element signature="e#1927#2843#0" expanded="false" />
-                <element signature="e#2904#3064#0" expanded="false" />
-                <element signature="n#!!block;n#getChild#0" expanded="false" />
-                <element signature="e#3512#4769#0" expanded="false" />
-                <element signature="e#4903#5830#0" expanded="false" />
-                <element signature="e#5974#6142#0" expanded="false" />
-                <element signature="e#6187#6226#0" expanded="false" />
-                <element signature="e#6300#7626#0" expanded="false" />
-                <element signature="e#7706#7937#0" expanded="false" />
-                <element signature="e#8008#8595#0" expanded="false" />
-                <element signature="e#8772#9245#0" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/category.js">
+      <file leaf-file-name="runjs1.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/html5Template/lab/runjs1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="153" column="35" selection-start="6146" selection-end="6146" vertical-scroll-proportion="0.4276808">
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,22 +199,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/html5Template/lab/toolbar.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/public/stylesheets/cssmerge.js" />
+        <option value="$PROJECT_DIR$/views/html5Template/article/comment.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/dev/login.css" />
+        <option value="$PROJECT_DIR$/public/javascript/prod/jsmerge.js" />
+        <option value="$PROJECT_DIR$/build.js" />
+        <option value="$PROJECT_DIR$/public/javascript/dev/main.js" />
+        <option value="$PROJECT_DIR$/controllers/articles.js" />
+        <option value="$PROJECT_DIR$/views/html5Template/admin/layout.html" />
+        <option value="$PROJECT_DIR$/public/libs/contextmenu/contextmenu.js" />
+        <option value="$PROJECT_DIR$/public/javascript/dev/menu.js" />
+        <option value="$PROJECT_DIR$/public/javascript/dev/utility.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/dev/reset.css" />
+        <option value="$PROJECT_DIR$/public/javascript/dev/view.js" />
         <option value="$PROJECT_DIR$/views/html5Template/lab/runjs1.html" />
-        <option value="$PROJECT_DIR$/public/stylesheets/runjs1.css" />
-        <option value="$PROJECT_DIR$/dbHelper/labProduct.js" />
-        <option value="$PROJECT_DIR$/service/LabService.js" />
-        <option value="$PROJECT_DIR$/public/javascript/runjs.js" />
-        <option value="$PROJECT_DIR$/public/javascript/dev/site.js" />
-        <option value="$PROJECT_DIR$/views/html5Template/layout.html" />
-        <option value="$PROJECT_DIR$/routes.js" />
-        <option value="$PROJECT_DIR$/controllers/lab.js" />
-        <option value="$PROJECT_DIR$/controllers/user.js" />
-        <option value="$PROJECT_DIR$/controllers/admin/article.js" />
-        <option value="$PROJECT_DIR$/lib/util.js" />
-        <option value="$PROJECT_DIR$/service/articleService.js" />
-        <option value="$PROJECT_DIR$/bin/combo" />
-        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/dev/runjs1.css" />
       </list>
     </option>
   </component>
@@ -232,7 +250,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,8 +268,105 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,11 +376,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\front-end\front-end\barryCode\public\assets" />
       <recent name="E:\front-end\front-end\barryCode\public\javascript\dev" />
+      <recent name="E:\front-end\front-end\barryCode\public\javascript\lib" />
+      <recent name="E:\front-end\front-end\barryCode\public\libs\contextmenu" />
       <recent name="E:\front-end\front-end\barryCode\public\stylesheets" />
-      <recent name="E:\front-end\front-end\barryCode\public\javascript" />
-      <recent name="E:\front-end\front-end\barryCode\models" />
-      <recent name="E:\front-end\front-end\barryCode\service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\front-end\front-end\barryCode\public\javascript\lib" />
+      <recent name="E:\front-end\front-end\barryCode\public\javascript\dev" />
+      <recent name="E:\front-end\front-end\barryCode\public\stylesheets\dev" />
+      <recent name="E:\front-end\front-end\barryCode\public\stylesheets\lib" />
+      <recent name="E:\front-end\front-end\barryCode\public\stylesheets" />
     </key>
   </component>
   <component name="RunManager">
@@ -280,7 +401,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -319,8 +440,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26643598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.733564" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -329,7 +451,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -393,151 +515,17 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/javascript/dev/index.js</url>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controllers/demoList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/feed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/tag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/lab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="344" column="86" selection-start="9916" selection-end="9916" vertical-scroll-proportion="-37.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="13" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/CategoryService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1148#1803#0" expanded="false" />
-            <element signature="e#1927#2843#0" expanded="false" />
-            <element signature="e#2904#3064#0" expanded="false" />
-            <element signature="n#!!block;n#getChild#0" expanded="false" />
-            <element signature="e#3512#4769#0" expanded="false" />
-            <element signature="e#4903#5830#0" expanded="false" />
-            <element signature="e#5974#6142#0" expanded="false" />
-            <element signature="e#6187#6226#0" expanded="false" />
-            <element signature="e#6300#7626#0" expanded="false" />
-            <element signature="e#7706#7937#0" expanded="false" />
-            <element signature="e#8008#8595#0" expanded="false" />
-            <element signature="e#8772#9245#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/admin/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="0" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#317#828#0" expanded="false" />
-            <element signature="e#872#1433#0" expanded="false" />
-            <element signature="e#1476#1808#0" expanded="false" />
-            <element signature="e#1854#2210#0" expanded="false" />
-            <element signature="e#2255#3173#0" expanded="false" />
-            <element signature="e#3219#4122#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbHelper/categoryRelation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="78" selection-start="1817" selection-end="1827" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#313#1153#0" expanded="false" />
-            <element signature="e#1214#1281#0" expanded="false" />
-            <element signature="e#1346#1574#0" expanded="false" />
-            <element signature="e#1907#2090#0" expanded="false" />
-            <element signature="e#2253#2522#0" expanded="false" />
-            <element signature="e#2653#2904#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="30" selection-start="3145" selection-end="3145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/articleService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="0" selection-start="3715" selection-end="3715" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#601#1774#0" expanded="false" />
-            <element signature="e#5074#5622#0" expanded="false" />
-            <element signature="e#5802#7182#0" expanded="false" />
-            <element signature="e#7324#7508#0" expanded="false" />
-            <element signature="e#7650#8177#0" expanded="false" />
-            <element signature="e#8242#8439#0" expanded="false" />
-            <element signature="e#8485#9382#0" expanded="false" />
-            <element signature="e#9503#9921#0" expanded="false" />
-            <element signature="e#10007#10320#0" expanded="false" />
-            <element signature="e#10369#10414#0" expanded="false" />
-            <element signature="e#10670#10851#0" expanded="false" />
-            <element signature="e#10906#11042#0" expanded="false" />
-            <element signature="e#11114#12465#0" expanded="false" />
-            <element signature="e#12540#13145#0" expanded="false" />
-            <element signature="e#13204#13240#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/combo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="56" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.txt">
+    <entry file="file://$PROJECT_DIR$/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -546,8 +534,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="12" selection-start="2128" selection-end="2128" vertical-scroll-proportion="0.69678956">
+        <state line="60" column="24" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.5862069">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/dev/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="0" selection-start="4669" selection-end="4669" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#test#0" expanded="false" />
+            <element signature="n#!!block;n#submitDelete#0" expanded="false" />
+            <element signature="e#4710#5825#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/articles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="0" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/dev/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/libs/contextmenu/contextmenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="407" column="3" selection-start="12641" selection-end="12641" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/dev/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="41" selection-start="2703" selection-end="2703" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/dev/utility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="10" selection-start="4803" selection-end="4803" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/html5Template/admin/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="103" selection-start="7170" selection-end="7170" vertical-scroll-proportion="28.807692">
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/dev/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="1" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/dev/override.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/dev/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="61" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="34" selection-start="1169" selection-end="1181" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/html5Template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/dev/runjs1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="209" column="1" selection-start="3138" selection-end="3138" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/html5Template/lab/runjs1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="35" selection-start="6146" selection-end="6146" vertical-scroll-proportion="0.4276808">
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

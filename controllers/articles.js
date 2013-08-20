@@ -7,7 +7,7 @@ var EventProxy = require('EventProxy');
 
 
 exports.index = function(req, res, next){	
-		var pagenum = req.query.page ? parseInt(req.query.page) : 0;
+    var pagenum = req.query.page ? parseInt(req.query.page) : 0;
     var pagesize = config.list_post_count;
     var proxy = new EventProxy();
     var events = ['articles','count','hotarticles','categories','tags'];
@@ -83,7 +83,7 @@ exports.comment = function(req, res, next){
 	if(!commentid)
 		commentid = null;
 	var content = req.body.t_content;
-	//res.redirect('/articles/detail/'+articleid);
+
 	CommentService.addCommentsOfArticle(articleid,null,content,commentid,function(err,comment){
 		res.redirect('/articles/detail/'+articleid);
 	});

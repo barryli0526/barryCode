@@ -19,6 +19,8 @@
     "xss": "0.0.3",
     "iconv-lite":"*",
     "jsdom":"*",
-    "elementtree":"*"
+    "elementtree":"*",
+    "uglify-js":"@1",
+    "clean-css":"*"
   }
 }
