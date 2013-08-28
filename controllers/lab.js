@@ -102,6 +102,13 @@ exports.save =  function(req, res, next){
 
                     }
                 })
+
+                util.createSnapShot(savepath, 'file',path.resolve(path.join(userDir, 'snapshot.png')),function(){
+
+                })
+
+
+
                 res.end(data.id);
             }
         })

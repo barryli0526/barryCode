@@ -252,21 +252,8 @@
 
 
 <script src="/javascript/dev/main.js"></script>-->
-<script type="text/javascript" src="/javascript/prod/admin.min.js"/>
+<script type="text/javascript" src="/javascript/prod/admin.min.js"></script>
 <!--<link type='text/css' rel='stylesheet' href='/libs/code-prettify/prettify.css' />
 <link href="/stylesheets/markdown.css" rel="stylesheet"/>-->
-
-<script type="text/javascript">
-    $(function() {
-        var editors = {};
-        function run_md_editor(){
-            var converter = new Showdown.converter();
-            editors[""] = new Markdown.Editor(converter);
-            editors[""].run();
-        }
-        run_md_editor();
-
-    });
-</script>
 </body>
 </html>

@@ -12,7 +12,7 @@ module.exports = {
      'chat':['chat.min.js','javascript/dev/socket.js'],
      'admin':['admin.min.js','javascript/vendor/jquery-1.9.1.min.js','javascript/vendor/jquery-migrate-1.1.1.min.js','javascript/vendor/jquery-ui-1.10.0.custom.min.js',
                 'javascript/vendor/bootstrap.min.js','javascript/lib/jquery.mousewheel.js','javascript/vendor/jquery.ui.widget.js','javascript/lib/jquery.iframe-transport.js',
-                'javascript/lib/jquery.fileupload.js','libs/code-prettify/prettify.js','libs/ajax-upload/ajaxupload.js','libs/pagedown/Markdown.Converter.js',
-                'javascript/lib/jquery.tagsinput.min.js','javascript/lib/chosen.jquery.min.js','javascript/lib/jquery.uniform.min.js','javascript/dev/main.js']
+                'javascript/lib/jquery.fileupload.js','libs/code-prettify/prettify.js','libs/ajax-upload/ajaxupload.js','libs/pagedown/Markdown.Converter.js','libs/showdown.js',
+                'libs/pagedown/Markdown.Editor.js','javascript/lib/jquery.tagsinput.min.js','javascript/lib/chosen.jquery.min.js','javascript/lib/jquery.uniform.min.js','javascript/dev/main.js']
 }
 }

@@ -76,6 +76,9 @@
     }) */
 
 
+    initEditor();
+
+
 //test();
 });
 
@@ -217,6 +220,17 @@ function updateArticle(){
             }
         })
     })
+}
+
+
+function initEditor(){
+    var editors = {};
+    function run_md_editor(){
+        var converter = new Showdown.converter();
+        editors[""] = new Markdown.Editor(converter);
+        editors[""].run();
+    }
+    run_md_editor();
 }
 
 

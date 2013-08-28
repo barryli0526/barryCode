@@ -121,5 +121,6 @@ module.exports = function (app, client) {
   app.put('/lab/:sid', lab.update);
   app.delete('/lab/resources/:sid', lab.removeResources);
   app.delete('/lab/:sid', lab.removeProject);
+ // app.get('/lab/download', lab.download);
 
 };

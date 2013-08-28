@@ -1,12 +1,13 @@
 //var Get = require('../../dl').Get;
-var labService = require('../../service/LabService');
+/*var labService = require('../../service/LabService');
 var dbHelper = require('../../dbHelper');
 var labProduct = dbHelper.LabProduct;
 var parset = require('../../service/Parser');
-var path = require('path');
+var path = require('path');*/
+var util = require('../../lib/util');
 
 
-var testgetUserPost = function(){
+/*var testgetUserPost = function(){
 
 	var userid = "518748b1fc9890a00c000001";
 	var pageno = 1;
@@ -30,7 +31,7 @@ var testgetReplies = function(){
 //testgetReplies();
 
 
-var arr = 'qqq,ggg'.split(',');
+var arr = 'qqq,ggg'.split(',');*/
 
 //labProduct.AddResources('V3QZR',{'resources':arr},function(err, doc){
  //       console.log(doc)
@@ -43,6 +44,7 @@ var arr = 'qqq,ggg'.split(',');
 //    console.log(doc);
 //})
 
+/*
 var filepath = path.resolve('../../public/content/library.xml');
 
 parset.xmlParser(filepath, function(err,doc){
@@ -51,4 +53,9 @@ parset.xmlParser(filepath, function(err,doc){
         console.log(item.attrib.name);
     })
     //console.log(items)
+})*/
+
+
+util.createSnapShot('','','',function(){
+
 })
