@@ -4,7 +4,7 @@ var Category = dbHelper.Category;
 var CategoryInfo = dbHelper.CategoryInfo;
 var CategoryRelation = dbHelper.CategoryRelation;
 var Message = require('../config/message').Message;
-var EventProxy = require('EventProxy');
+var EventProxy = require('eventproxy');
 var util = require('../lib/util');
 
 /*exports.createACategory = function(parentid,authorid, name,searchname, desc, imgpath, callback){
