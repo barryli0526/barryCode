@@ -10,7 +10,7 @@
  */
 
 var User = require('../dbHelper').User;
-var EventProxy = require('EventProxy');
+var EventProxy = require('eventproxy');
 
 /**
  * 从文本中提取出@username 标记的用户名数组
