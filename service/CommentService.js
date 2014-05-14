@@ -8,7 +8,7 @@ var ArticleInfo = dbHelper.ArticleInfo;
 var Tag = dbHelper.Tag;
 var Message = require('../config/message').Message;
 var util = require('../lib/util');
-var EventProxy = require('EventProxy');
+var EventProxy = require('eventproxy');
 var at = require('../extensions/at');
 
 exports.geCommentsOfArticle = function(articleid, pageSize, pageIndex, callback){
