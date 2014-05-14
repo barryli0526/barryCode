@@ -9,7 +9,7 @@
 
 var fs = require('fs');
 var crypto = require('crypto');
-var EventProxy = require('EventProxy');
+var EventProxy = require('eventproxy');
 
 
 
