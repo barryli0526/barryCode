@@ -12,7 +12,7 @@ var Message = require('../config/message').Message;
 var util = require('../lib/util');
 var CategoryService = require('./CategoryService');
 var CommentService = require('./CommentService');
-var EventProxy = require('EventProxy');
+var EventProxy = require('eventproxy');
 
 
 /*exports.CreateArticle = function(authorid, title, summary, content, categories, tags, mkeywords, mdesc, callback){
