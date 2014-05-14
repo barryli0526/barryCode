@@ -3,7 +3,7 @@ var User = dbHelper.User;
 var UserInfo = dbHelper.UserInfo;
 var Message = require('../config/message').Message;
 var labels = require('../config/labels').labels;
-var EventProxy = require('EventProxy');
+var EventProxy = require('eventproxy');
 var util = require('../lib/util');
 
 
