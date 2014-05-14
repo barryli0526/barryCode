@@ -3,7 +3,7 @@ var dbHelper = require('../dbHelper');
 var labProduct = dbHelper.LabProduct;
 var User = dbHelper.User;
 var util = require('../lib/util');
-var EventProxy = require('EventProxy');
+var EventProxy = require('eventproxy');
 
 
 
